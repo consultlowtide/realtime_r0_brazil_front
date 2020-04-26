@@ -12,16 +12,16 @@ const TooltipCaseLine = ({ data = {} }) => {
   return (
     <Paper variant="outlined" elevation={3} className={classes.root}>
       <Typography variant="caption">
-        <strong>Dia {formatDate(data?.date)}</strong>
+        <strong>Date {formatDate(data?.date)}</strong>
       </Typography>
       <br />
       <Typography variant="caption">
-        Novos casos: <strong>{data?.y}</strong>
+        New cases <strong>{data?.newCases ?? data?.y}</strong>
       </Typography>
       <br />
       <Typography variant="caption">
-        Média móvel ({daysAvg}d):{' '}
-        <strong>{(data?.y / daysAvg).toFixed(1)}</strong>
+        Moving average ({daysAvg}d):{' '}
+        <strong>{data?.smoothedCases ?? data?.y}</strong>
       </Typography>
     </Paper>
   );

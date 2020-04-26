@@ -16,7 +16,7 @@ const Home = () => {
 
   const loading = useSelector((state) => state.loading);
   const error = useSelector((state) => state.error);
-  const states = useSelector((state) => state.data?.states);
+  const provinces = useSelector((state) => state.data?.provinces);
 
   const canRender = useCallback(
     (data) => !error && !loading && data !== undefined && data !== null,
@@ -40,8 +40,8 @@ const Home = () => {
   if (error) {
     return (
       <div className={classes.errorWrapper}>
-        <Typography variant="h5">Um Erro ocorreu!</Typography>
-        <Typography variant="h6">Tente novamente mais tarde.</Typography>
+        <Typography variant="h5">Uh oh!</Typography>
+        <Typography variant="h6">Something has gone wrong.</Typography>
       </div>
     );
   }
@@ -63,7 +63,7 @@ const Home = () => {
         description="Para fazer uma comparação entre estados, mostramos a última estimativa de <em>R<sub>t</sub></em> de cada estado no gráfico a seguir, com a incerteza associada.<br>Os gráficos estão ordenados do melhor para o pior usando a estimativa mais provável do modelo."
       >
         <div className={classes.barChartWrapper}>
-          {canRender(states) ? <Line data={states} /> : <Loader />}
+          {canRender(provinces) ? <Line data={provinces} /> : <Loader />}
         </div>
       </Section>
       <Section
@@ -77,7 +77,7 @@ const Home = () => {
           justify="center"
           spacing={4}
         >
-          {canRender(states) ? <RiskList data={states} /> : <Loader />}
+          {canRender(provinces) ? <RiskList data={provinces} /> : <Loader />}
         </Grid>
       </Section>
     </>

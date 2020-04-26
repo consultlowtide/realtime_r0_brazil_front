@@ -1,23 +1,27 @@
-import { get } from 'utils';
 import actionTypes from './action_types';
+import { caseData } from '../caseData';
+import { formatData } from '../utils/format-data';
 
 export const getModelResults = () => async (dispatch) => {
-  dispatch({ type: actionTypes.LOAD_MODEL_REQUEST });
+  dispatch({
+    type: actionTypes.LOAD_MODEL_REQUEST,
+  });
 
-  return await get('/get_model_results')
-    .then((res) => {
-      const { data } = res?.data || {};
+  try {
+    const data = await formatData(caseData.data);
 
-      dispatch({
-        type: actionTypes.LOAD_MODEL_SUCCESS,
-        payload: {
-          data,
-        },
-      });
-
-      return data;
-    })
-    .catch(() => {
-      dispatch({ type: actionTypes.LOAD_MODEL_FAILURE });
+    dispatch({
+      type: actionTypes.LOAD_MODEL_SUCCESS,
+      payload: {
+        data: data,
+      },
     });
+    console.log('within actions:', data);
+
+    return data;
+  } catch (err) {
+    dispatch({
+      type: actionTypes.LOAD_MODEL_FAILURE,
+    });
+  }
 };

@@ -7,7 +7,7 @@ import Tooltip from 'components/charts/Tooltip';
 const TooltipScatter = ({ data }) => (
   <Tooltip data={data}>
     <Typography variant="caption">
-      <strong>Dia {formatDate(data?.date)}</strong>
+      <strong>Date {formatDate(data?.date)}</strong>
     </Typography>
   </Tooltip>
 );

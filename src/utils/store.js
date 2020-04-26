@@ -1,34 +1,18 @@
 import { dateObjectBuider } from 'utils';
 
-export const BRAZIL_STATES = {
-  AC: 'Acre',
-  AL: 'Alagoas',
-  AP: 'Amapá',
-  AM: 'Amazonas',
-  BA: 'Bahia',
-  CE: 'Ceará',
-  DF: 'Distrito Federal',
-  ES: 'Espírito Santo',
-  GO: 'Goiás',
-  MA: 'Maranhão',
-  MT: 'Mato Grosso',
-  MS: 'Mato Grosso do Sul',
-  MG: 'Minas Gerais',
-  PA: 'Pará',
-  PB: 'Paraíba',
-  PR: 'Paraná',
-  PE: 'Pernambuco',
-  PI: 'Piauí',
-  RJ: 'Rio de Janeiro',
-  RN: 'Rio Grande do Norte',
-  RS: 'Rio Grande do Sul',
-  RO: 'Rondônia',
-  RR: 'Roraima',
-  SC: 'Santa Catarina',
-  SP: 'São Paulo',
-  SE: 'Sergipe',
-  TO: 'Tocantins',
-  Brazil: 'Brasil',
+export const CANADIAN_PROVINCES = {
+  AB: 'Alberta',
+  ON: 'Ontario',
+  BC: 'British Columbia',
+  SK: 'Saskatchewan',
+  MB: 'Manitoba',
+  QC: 'Québec',
+  PEI: 'Prince Edward Island',
+  NB: 'New Brunswick',
+  NS: 'Nova Scotia',
+  YT: 'Yukon',
+  NWT: 'Northwest Territories',
+  NL: 'Newfoundland & Labrador',
 };
 
 export const getLastTimestamp = (data) => data?.[data?.length - 1][1];
@@ -45,130 +29,130 @@ export const formatListData = (data) => {
       ...current,
       [id]: (current[id] || []).concat({
         id,
-        state: id,
+        province: id,
         date,
         x: date,
         y,
         low,
         high,
-        newCases,
-        smoothedCases,
+        // newCases,
+        // smoothedCases,
       }),
     };
   }, {});
 };
 
-export const formatNewCasesData = (data) => {
-  return data?.reduce((current, next) => {
-    const [id, x, rt, low, high, newCases, smoothedCases] = next;
-    const date = dateObjectBuider(x);
+// export const formatNewCasesData = (data) => {
+//   return data?.reduce((current, next) => {
+//     const [id, x, rt, low, high, newCases, smoothedCases] = next;
+//     const date = dateObjectBuider(x);
 
-    return {
-      ...current,
-      [id]: (current[id] || []).concat({
-        id,
-        state: id,
-        date,
-        x: date,
-        rt,
-        low,
-        high,
-        y: newCases,
-        smoothedCases,
-      }),
-    };
-  }, {});
-};
+//     return {
+//       ...current,
+//       [id]: (current[id] || []).concat({
+//         id,
+//         province: id,
+//         date,
+//         x: date,
+//         rt,
+//         low,
+//         high,
+//         y: newCases,
+//         smoothedCases,
+//       }),
+//     };
+//   }, {});
+// };
 
-export const formatSmoothedCasesData = (data) => {
-  return data?.reduce((current, next) => {
-    const [id, x, rt, low, high, newCases, smoothedCases] = next;
-    const date = dateObjectBuider(x);
+// export const formatSmoothedCasesData = (data) => {
+//   return data?.reduce((current, next) => {
+//     const [id, x, rt, low, high, newCases, smoothedCases] = next;
+//     const date = dateObjectBuider(x);
 
-    return {
-      ...current,
-      [id]: (current[id] || []).concat({
-        id,
-        state: id,
-        date,
-        x: date,
-        rt,
-        low,
-        high,
-        newCases,
-        y: smoothedCases,
-      }),
-    };
-  }, {});
-};
+//     return {
+//       ...current,
+//       [id]: (current[id] || []).concat({
+//         id,
+//         province: id,
+//         date,
+//         x: date,
+//         rt,
+//         low,
+//         high,
+//         newCases,
+//         y: smoothedCases,
+//       }),
+//     };
+//   }, {});
+// };
 
-export const formatNewDeathsData = (data) => {
-  return data?.reduce((current, next) => {
-    const [
-      id,
-      x,
-      rt,
-      low,
-      high,
-      newCases,
-      smoothedCases,
-      newDeaths,
-      smoothedDeaths,
-    ] = next;
-    const date = dateObjectBuider(x);
+// export const formatNewDeathsData = (data) => {
+//   return data?.reduce((current, next) => {
+//     const [
+//       id,
+//       x,
+//       rt,
+//       low,
+//       high,
+//       newCases,
+//       smoothedCases,
+//       newDeaths,
+//       smoothedDeaths,
+//     ] = next;
+//     const date = dateObjectBuider(x);
 
-    return {
-      ...current,
-      [id]: (current[id] || []).concat({
-        id,
-        state: id,
-        date,
-        x: date,
-        rt,
-        low,
-        high,
-        newCases,
-        smoothedCases,
-        y: newDeaths,
-        smoothedDeaths,
-      }),
-    };
-  }, {});
-};
+//     return {
+//       ...current,
+//       [id]: (current[id] || []).concat({
+//         id,
+//         province: id,
+//         date,
+//         x: date,
+//         rt,
+//         low,
+//         high,
+//         newCases,
+//         smoothedCases,
+//         y: newDeaths,
+//         smoothedDeaths,
+//       }),
+//     };
+//   }, {});
+// };
 
-export const formatSmoothedDeathsData = (data) => {
-  return data?.reduce((current, next) => {
-    const [
-      id,
-      x,
-      rt,
-      low,
-      high,
-      newCases,
-      smoothedCases,
-      newDeaths,
-      smoothedDeaths,
-    ] = next;
-    const date = dateObjectBuider(x);
+// export const formatSmoothedDeathsData = (data) => {
+//   return data?.reduce((current, next) => {
+//     const [
+//       id,
+//       x,
+//       rt,
+//       low,
+//       high,
+//       newCases,
+//       smoothedCases,
+//       newDeaths,
+//       smoothedDeaths,
+//     ] = next;
+//     const date = dateObjectBuider(x);
 
-    return {
-      ...current,
-      [id]: (current[id] || []).concat({
-        id,
-        state: id,
-        date,
-        x: date,
-        rt,
-        low,
-        high,
-        newCases,
-        smoothedCases,
-        newDeaths,
-        y: smoothedDeaths,
-      }),
-    };
-  }, {});
-};
+//     return {
+//       ...current,
+//       [id]: (current[id] || []).concat({
+//         id,
+//         province: id,
+//         date,
+//         x: date,
+//         rt,
+//         low,
+//         high,
+//         newCases,
+//         smoothedCases,
+//         newDeaths,
+//         y: smoothedDeaths,
+//       }),
+//     };
+//   }, {});
+// };
 
 export const formatBarChartData = (data) => {
   const formattedData = formatListData(data) || {};

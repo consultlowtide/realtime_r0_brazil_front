@@ -1,13 +1,13 @@
 import { fullFormatDate, getLastTimestamp, dateObjectBuider } from 'utils';
 import actionTypes from './action_types';
 
-const inicialState = {
+const initialState = {
   data: null,
   error: false,
   loading: false,
 };
 
-export default (state = inicialState, { payload, type }) => {
+export default (state = initialState, { payload, type }) => {
   switch (type) {
     case actionTypes.LOAD_MODEL_REQUEST:
       return {
@@ -31,7 +31,7 @@ export default (state = inicialState, { payload, type }) => {
         ...state,
         data: {
           ...state.data,
-          states: payload?.data,
+          provinces: payload?.data,
           lastUpdateTime: fullFormatDate(date),
         },
         loading: false,
