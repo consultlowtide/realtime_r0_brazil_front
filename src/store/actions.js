@@ -1,6 +1,7 @@
 import actionTypes from './action_types';
-import { caseData } from '../caseData';
 import { formatData } from '../utils/format-data';
+// @ts-ignore
+import caseData from '../caseData/latest.json';
 
 export const getModelResults = () => async (dispatch) => {
   dispatch({
@@ -16,7 +17,6 @@ export const getModelResults = () => async (dispatch) => {
         data: data,
       },
     });
-    console.log('within actions:', data);
 
     return data;
   } catch (err) {
