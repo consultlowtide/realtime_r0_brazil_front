@@ -42,5 +42,5 @@
   "start_url": "/?utm_source=pwa",
   "display": "standalone",
   "theme_color": "#ff774a",
-  "background_color": "#F3F7FA"
+  "background_color": "#FFFFFF"
 }
