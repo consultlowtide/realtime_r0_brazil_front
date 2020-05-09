@@ -40,33 +40,29 @@ const Footer = () => {
         <ul>
           <li>
             <Typography variant="body1">
-              Download our
-              <Link
-                target="_blank"
-                color="primary"
-                href="https://docs.google.com/presentation/d/1J0xtMQH0LxN-ZEfnl8I4iooGofEp49fyqKIk69rMf1w/edit#slide=id.g71c335fc92_32_492"
-              >
+              Download our{' '}
+              <Link target="_blank" color="primary" href="#">
                 Jupyter notebook
               </Link>{' '}
-              to see how we're calculating...
+              to see how we're calculating{' '}
+              <em>
+                R<sub>t</sub>
+              </em>{' '}
+              for Canada
             </Typography>
           </li>
 
           <li>
             <Typography variant="body1">
               Download{' '}
-              <Link
-                target="_blank"
-                color="primary"
-                href="https://docs.google.com/presentation/d/1J0xtMQH0LxN-ZEfnl8I4iooGofEp49fyqKIk69rMf1w/edit#slide=id.g71c335fc92_32_492"
-              >
+              <Link target="_blank" color="primary" href="#">
                 calculated{' '}
                 <em>
                   R<sub>t</sub>
                 </em>{' '}
                 values
               </Link>{' '}
-              per province/territory....
+              per province/territory
             </Typography>
           </li>
 
@@ -75,7 +71,7 @@ const Footer = () => {
               <Link
                 target="_blank"
                 color="primary"
-                href="https://docs.google.com/presentation/d/1J0xtMQH0LxN-ZEfnl8I4iooGofEp49fyqKIk69rMf1w/edit#slide=id.g71c335fc92_32_492"
+                href="https://raw.githubusercontent.com/ishaberry/Covid19Canada/master/cases.csv"
               >
                 National case count data{' '}
               </Link>{' '}
@@ -83,7 +79,7 @@ const Footer = () => {
               <Link
                 target="_blank"
                 color="primary"
-                href="https://docs.google.com/presentation/d/1J0xtMQH0LxN-ZEfnl8I4iooGofEp49fyqKIk69rMf1w/edit#slide=id.g71c335fc92_32_492"
+                href="https://www.cmaj.ca/content/192/15/E420"
               >
                 COVID-19 Canada Open Data Working Group{' '}
               </Link>{' '}
@@ -95,20 +91,18 @@ const Footer = () => {
               <Link
                 target="_blank"
                 color="primary"
-                href="https://docs.google.com/presentation/d/1J0xtMQH0LxN-ZEfnl8I4iooGofEp49fyqKIk69rMf1w/edit#slide=id.g71c335fc92_32_492"
+                href="https://github.com/consultlowtide/rt-canada"
               >
                 GitHub repository
               </Link>{' '}
-              with the front end of this project.
+              with the front end code for this site.
             </Typography>
           </li>
         </ul>
         <Typography className={classes.sectionTitle} variant="h5">
-          rt.live
-        </Typography>
-
-        <Typography className={classes.sectionTitle} variant="h5">
-          loft.science
+          <Link target="_blank" href="https://rt.live">
+            rt.live
+          </Link>{' '}
         </Typography>
         <ul>
           <li>
@@ -116,56 +110,27 @@ const Footer = () => {
               <Link
                 target="_blank"
                 color="primary"
-                href="https://docs.google.com/presentation/d/1J0xtMQH0LxN-ZEfnl8I4iooGofEp49fyqKIk69rMf1w/edit#slide=id.g71c335fc92_32_492"
+                href="https://twitter.com/kevin"
               >
-                Base Case
+                Kevin Systrom
               </Link>{' '}
-              and Loft{' '}
+              and{' '}
               <Link
                 target="_blank"
                 color="primary"
-                href="https://docs.google.com/presentation/d/1OeQuD0zuU5FcOUGWxkidCvFDloHuMa9zs03iTW2QjCM/edit#slide=id.g714b42d86c_6_298"
+                href="https://twitter.com/tvladeck"
               >
-                Action Plan
+                Thomas Vladeck
               </Link>
-              , released to the community
-            </Typography>
-          </li>
-          <li>
-            <Typography variant="body1">
+              's{' '}
               <Link
                 target="_blank"
                 color="primary"
-                href="https://docs.google.com/document/d/1PvR_dI5L_5mhjDWovgIgkkSMtFFHFQ9bRYCY9hx30ZE/edit?ts=5e6a7c6f"
+                href="https://github.com/k-sys/covid-19/blob/master/Realtime%20Rt%20mcmc.ipynb"
               >
-                Warzoom
+                Jupyter notebook
               </Link>{' '}
-              Loft with all internal policies, updated daily
-            </Typography>
-          </li>
-          <li>
-            <Typography variant="body1">
-              COVID-19 modeling{' '}
-              <Link
-                target="_blank"
-                color="primary"
-                href="https://docs.google.com/document/d/1c8U-eZSZQwr8m3KifQBndBOv0WlDDJ9aD0VPYATe3cg/edit#heading=h.gkvqnzw9i612"
-              >
-                reports
-              </Link>{' '}
-              from the Loft data science team
-            </Typography>
-          </li>
-          <li>
-            <Typography variant="body1">
-              <Link
-                target="_blank"
-                color="primary"
-                href="https://github.com/loft-br/realtime_r0_brazil"
-              >
-                GitHub repository
-              </Link>{' '}
-              with the front end of this project{' '}
+              with their methodology for calculating{' '}
               <em>
                 R<sub>t</sub>
               </em>
@@ -173,58 +138,89 @@ const Footer = () => {
           </li>
           <li>
             <Typography variant="body1">
-              Kevin Systrom's{' '}
               <Link
                 target="_blank"
                 color="primary"
-                href="https://github.com/k-sys/covid-19/blob/master/Realtime%20R0.ipynb"
+                href="http://systrom.com/blog/the-metric-we-need-to-manage-covid-19/"
               >
-                Jupyter notebook
-              </Link>{' '}
-              with his methodology for calculating{' '}
-              <em>
-                R<sub>t</sub>
-              </em>{' '}
+                The Metric We Need to Manage COVID-19
+              </Link>
+            </Typography>
+          </li>
+          <li>
+            <Typography variant="body1">
+              <Link
+                target="_blank"
+                color="primary"
+                href="http://systrom.com/blog/the-numbers-behind-social-distancing/"
+              >
+                The Numbers Behind Social Distancing
+              </Link>
             </Typography>
           </li>
         </ul>
-      </div>
-      <div className={classes.section}>
-        <Typography className={classes.sectionTitle} variant="h4">
-          Known limitations of the methodology
+
+        <Typography className={classes.sectionTitle} variant="h5">
+          <Link target="_blank" href="https://loft.science">
+            loft.science
+          </Link>{' '}
         </Typography>
         <ul>
           <li>
             <Typography variant="body1">
-              A relevant note: our database ...
+              Loft's{' '}
+              <Link
+                target="_blank"
+                color="primary"
+                href="https://github.com/loft-br/realtime_r0_brazil"
+              >
+                GitHub repository
+              </Link>{' '}
+              with their{' '}
+              <em>
+                R<sub>t</sub>
+              </em>{' '}
+              calculation methodology for Brazil{' '}
             </Typography>
           </li>
           <li>
             <Typography variant="body1">
-              There is a delay between contracting the disease and testing
-              positive. This is not reflected in these figures. Actual{' '}
-              <em>
-                R<sub>t</sub>
-              </em>{' '}
-              values may be delayed by a few days.
-            </Typography>
-          </li>
-          <li>
-            <Typography variant="body1">
-              Tentamos fazer a estimativa de{' '}
-              <em>
-                R<sub>t</sub>
-              </em>{' '}
-              da melhor forma possível. Mesmo que este seja o caso, é impossível
-              fazê-lo com perfeição. Pedimos para que levem isto em
-              consideração.
+              Loft's{' '}
+              <Link
+                target="_blank"
+                color="primary"
+                href="https://github.com/loft-br/realtime_r0_brazil"
+              >
+                GitHub repository
+              </Link>{' '}
+              with their front end code for{' '}
+              <Link target="_blank" color="primary" href="https://loft.science">
+                loft.science
+              </Link>{' '}
             </Typography>
           </li>
         </ul>
       </div>
       <div className={classes.section}>
         <Typography className={classes.sectionTitle} variant="h4">
-          Credits
+          About the Data
+        </Typography>
+        <Typography variant="body1">
+          The COVID-19 Canada Open Data Working Group collects information on
+          confirmed and presumptive positive cases of COVID-19 in Canada. Each
+          line in their dataset represents a unique case. Data is entered
+          manually and updated daily. All data is exclusively collected from
+          publicly available sources including government reports, government
+          websites, and news media.
+          <em>
+            R<sub>t</sub>
+          </em>{' '}
+          values may be delayed by a few days.
+        </Typography>
+      </div>
+      <div className={classes.section}>
+        <Typography className={classes.sectionTitle} variant="h4">
+          Acknowledgements
         </Typography>
         <Typography variant="body1">
           Analysis by{' '}
