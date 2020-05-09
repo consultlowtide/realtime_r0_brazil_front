@@ -48,7 +48,7 @@ const Home = () => {
 
   return (
     <>
-      <Section description="To make a comparison between provinces and territories, we show the last estimate of <em>R<sub>t</sub></em> for each <strong>?state?</strong> in the graph below, with the associated uncertainty. <strong>?The graphs are ordered from best to worst using the model's most likely estimate.?</strong>">
+      <Section>
         <div className={classes.barChartWrapper}>
           {canRender(provinces) ? <Line data={provinces} /> : <Loader />}
         </div>
