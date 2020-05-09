@@ -6,7 +6,7 @@ export const CANADIAN_PROVINCES = {
   BC: 'British Columbia',
   SK: 'Saskatchewan',
   MB: 'Manitoba',
-  QC: 'Québec',
+  QB: 'Quebec',
   PEI: 'Prince Edward Island',
   NB: 'New Brunswick',
   NS: 'Nova Scotia',
