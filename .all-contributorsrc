@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "ryan-neufeld",
+      "name": "Ryan Neufeld",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/49967887?v=4",
+      "profile": "http://www.iamryanneufeld.com",
+      "contributions": [
+        "design"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "rt-canada",
+  "projectOwner": "consultlowtide",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
