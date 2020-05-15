@@ -1,6 +1,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9a453cd6-8c14-4ddf-8481-98f002ab8932/deploy-status)](https://app.netlify.com/sites/rt-canada/deploys)
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 # Loft Science
@@ -24,6 +24,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="http://www.iamryanneufeld.com"><img src="https://avatars1.githubusercontent.com/u/49967887?v=4" width="100px;" alt=""/><br /><sub><b>Ryan Neufeld</b></sub></a><br /><a href="#design-ryan-neufeld" title="Design">🎨</a></td>
+    <td align="center"><a href="http://consultlowtide.ca"><img src="https://avatars1.githubusercontent.com/u/13721239?v=4" width="100px;" alt=""/><br /><sub><b>Martin Laws</b></sub></a><br /><a href="https://github.com/consultlowtide/rt-canada/commits?author=martinlaws" title="Code">💻</a></td>
   </tr>
 </table>
 
