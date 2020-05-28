@@ -8,12 +8,11 @@ import useStyles from './Layout.styles';
 
 const Layout = ({ children }) => {
   const classes = useStyles();
-  const formattedDate = useSelector((state) => state?.data?.lastUpdateTime);
 
   return (
     <>
       <Container className={classes.container} maxWidth="lg" component="main">
-        <Typography variant="h2" component="h2">
+        <Typography variant="h1" component="h1">
           <em>
             R<sub>t</sub>
           </em>{' '}

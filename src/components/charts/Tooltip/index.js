@@ -1,8 +1,6 @@
 import React from 'react';
 
 import { Typography, Paper } from '@material-ui/core';
-import Rt from 'components/Rt';
-import Thumb from 'components/Thumb';
 
 import useStyles from './Tooltip.styles';
 import { CANADIAN_PROVINCES } from 'utils';

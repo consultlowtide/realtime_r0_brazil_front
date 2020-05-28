@@ -19,6 +19,30 @@ const theme = createMuiTheme({
       primary: '#191F23',
     },
   },
+  typography: {
+    h1: {
+      fontFamily: 'Inknut Antiqua, serif',
+      fontSize: 24,
+      fontWeight: 400,
+    },
+    h2: {
+      fontFamily: 'Inknut Antiqua, serif',
+      fontSize: 20,
+      fontWeight: 500,
+    },
+    h3: {
+      fontFamily: 'Inknut Antiqua, serif',
+    },
+    h4: {
+      fontFamily: 'Inknut Antiqua, serif',
+    },
+    body1: {
+      fontWeight: 500,
+    },
+    button: {
+      fontStyle: 'italic',
+    },
+  },
 });
 
 export default theme;
