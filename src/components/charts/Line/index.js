@@ -151,6 +151,20 @@ const Line = ({ data: content }) => {
         'mesh',
         'legends',
       ]}
+      theme={{
+        axis: {
+          ticks: {
+            text: {
+              fill: '#777677',
+            },
+          },
+        },
+        grid: {
+          line: {
+            stroke: '#D8D8D8',
+          },
+        },
+      }}
     />
   );
 };
