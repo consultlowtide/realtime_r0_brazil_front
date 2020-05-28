@@ -47,13 +47,13 @@ const CustomSymbol = ({ size, color, borderWidth, borderColor, ...rest }) => {
         strokeWidth={borderWidth}
         stroke={rest.datum.y > 1 ? '#ED6453' : '#40CC7E'}
       />
-      {/* <circle
+      <circle
         r={size / 5}
         strokeWidth={borderWidth}
         stroke={rest.datum.y > 1 ? '#ED6453' : '#40CC7E'}
         fill={rest.datum.y > 1 ? '#ED6453' : '#40CC7E'}
         fillOpacity={0.35}
-      /> */}
+      />
     </g>
   );
 };
