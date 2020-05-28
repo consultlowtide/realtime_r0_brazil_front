@@ -46,15 +46,15 @@ const CustomSymbol = ({ size, color, borderWidth, borderColor, ...rest }) => {
         fill="#fff"
         r={size / 2}
         strokeWidth={borderWidth}
-        stroke={rest.datum.y > 1 ? '#ff774a' : '#19857b'}
+        stroke={rest.datum.y > 1 ? '#ED6453' : '#40CC7E'}
       />
-      <circle
+      {/* <circle
         r={size / 5}
         strokeWidth={borderWidth}
-        stroke={rest.datum.y > 1 ? '#ff774a' : '#19857b'}
-        fill={rest.datum.y > 1 ? '#ff774a' : '#19857b'}
+        stroke={rest.datum.y > 1 ? '#ED6453' : '#40CC7E'}
+        fill={rest.datum.y > 1 ? '#ED6453' : '#40CC7E'}
         fillOpacity={0.35}
-      />
+      /> */}
     </g>
   );
 };
@@ -127,7 +127,7 @@ const Line = ({ data: content }) => {
         type: 'linear',
         stacked: false,
         min: 0,
-        max: 4,
+        max: 2,
       }}
       axisLeft={{
         format: (d) => d.toFixed(1),
