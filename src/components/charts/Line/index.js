@@ -132,6 +132,7 @@ const Line = ({ data: content }) => {
       axisLeft={{
         format: (d) => d.toFixed(1),
       }}
+      axisBottom={false}
       tooltip={({ point }) => <TooltipLine data={point?.data} />}
       enableArea={true}
       areaOpacity={0.0}

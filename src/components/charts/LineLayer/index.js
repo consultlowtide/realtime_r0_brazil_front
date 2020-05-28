@@ -8,7 +8,7 @@ const LineLayer = (props) => {
     .x((d) => xScale(d?.data?.x))
     .y(() => yScale(1));
 
-  return <path stroke="#191F23" strokeWidth="1" d={avgline(nodes || points)} />;
+  return <path stroke="#DE372D" strokeWidth="1" d={avgline(nodes || points)} />;
 };
 
 export default LineLayer;
