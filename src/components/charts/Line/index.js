@@ -38,8 +38,7 @@ const CustomSymbol = ({ size, color, borderWidth, borderColor, ...rest }) => {
         x="-4"
         height={height}
         y={(-(rest.datum.high - rest.datum.low) * 100) / 2}
-        opacity="0.2"
-        fill="#ff774a"
+        fill={rest.datum.y > 1 ? '#FFDAD2' : '#C7F5C0'}
       />
       <div>{rest.datum.id}</div>
       <circle
