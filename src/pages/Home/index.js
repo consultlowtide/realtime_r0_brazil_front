@@ -48,12 +48,18 @@ const Home = () => {
 
   return (
     <>
-      <Section>
+      <Section
+        description="Aggregate Provincial Rt bar chart"
+        title="Aggregate Provincial Rt bar chart"
+      >
         <div className={classes.barChartWrapper}>
           {canRender(provinces) ? <Line data={provinces} /> : <Loader />}
         </div>
       </Section>
-      <Section>
+      <Section
+        description="Per-province Rt area charts"
+        title="Per-province Rt BarChart"
+      >
         <Grid
           container
           direction="column"
