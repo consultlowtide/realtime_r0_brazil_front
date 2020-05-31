@@ -227,7 +227,7 @@ const Footer = () => {
           <Link
             target="_blank"
             color="primary"
-            href="https://www.linkedin.com/in/gdmarmerola/"
+            href="https://github.com/ivanpeng"
           >
             Ivan Peng
           </Link>{' '}
@@ -237,7 +237,7 @@ const Footer = () => {
           <Link
             target="_blank"
             color="primary"
-            href="https://www.linkedin.com/in/thiago-capelo-0156446a/"
+            href="https://github.com/martinlaws"
           >
             Martin Laws
           </Link>
@@ -247,7 +247,7 @@ const Footer = () => {
           <Link
             target="_blank"
             color="primary"
-            href="https://www.linkedin.com/in/flora-oliveira-37201b42/"
+            href="https://www.linkedin.com/in/iamryanneufeld/"
           >
             Ryan Neufeld
           </Link>
