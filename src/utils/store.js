@@ -12,7 +12,7 @@ export const CANADIAN_PROVINCES = {
   NS: 'Nova Scotia',
   YT: 'Yukon',
   NWT: 'Northwest Territories',
-  NL: 'Newfoundland & Labrador',
+  NL: 'Newfoundland and Labrador',
 };
 
 export const getLastTimestamp = (data) => data?.[data?.length - 1][1];
