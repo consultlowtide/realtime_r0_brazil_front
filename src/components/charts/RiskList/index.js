@@ -24,7 +24,7 @@ import {
 import useStyles from './RiskList.styles';
 
 const RiskList = ({ data: content }) => {
-  const classes = useStyles();
+  // const classes = useStyles();
   const rtData = formatListData(content);
   // const newCases = formatNewCasesData(content);
   // const smoothedCases = formatSmoothedCasesData(content);
@@ -85,9 +85,9 @@ const BoxChart = ({
   return (
     <div className={classes.root}>
       <header className={classes.header}>
-        <Typography variant="h6">{CANADIAN_PROVINCES[id]}</Typography>
+        <Typography variant="h2">{CANADIAN_PROVINCES[id]}</Typography>
         <Typography
-          variant="h6"
+          variant="h4"
           color={getLastRtValue(rtData, id) < 1 ? 'secondary' : 'error'}
         >
           <strong>{getLastRtValue(rtData, id)}</strong>

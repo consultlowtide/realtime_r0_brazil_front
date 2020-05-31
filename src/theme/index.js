@@ -22,7 +22,7 @@ const theme = createMuiTheme({
   typography: {
     h1: {
       fontFamily: 'Inknut Antiqua, serif',
-      fontSize: 24,
+      fontSize: 36,
       fontWeight: 400,
     },
     h2: {
@@ -34,9 +34,16 @@ const theme = createMuiTheme({
       fontFamily: 'Inknut Antiqua, serif',
     },
     h4: {
+      fontFamily: 'IBM Plex Sans, sans-serif',
+      fontSize: 20,
+      fontWeight: 600,
+    },
+    h5: {
       fontFamily: 'Inknut Antiqua, serif',
     },
     body1: {
+      fontFamily: 'IBM Plex Sans, sans-serif',
+      fontSize: 16,
       fontWeight: 500,
     },
     button: {

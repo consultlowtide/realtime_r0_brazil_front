@@ -10,11 +10,13 @@ export const getModelResults = () => async (dispatch) => {
 
   try {
     const data = await formatData(caseData.data);
+    const lastUpdatedTimestamp = caseData.last_updated_timestamp;
 
     dispatch({
       type: actionTypes.LOAD_MODEL_SUCCESS,
       payload: {
-        data: data,
+        data,
+        lastUpdatedTimestamp,
       },
     });
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container } from '@material-ui/core';
-import { useSelector } from 'react-redux';
 
 import Footer from 'components/Footer';
 import Typography from 'components/Typography';
@@ -12,11 +11,11 @@ const Layout = ({ children }) => {
   return (
     <>
       <Container className={classes.container} maxWidth="lg" component="main">
-        <Typography variant="h1" component="h1">
+        <Typography variant="h1" component="h1" style={{ margin: '32px 0' }}>
           <em>
             R<sub>t</sub>
           </em>{' '}
-          COVID-19 Canada 🇨🇦
+          COVID-19 in Canada 🇨🇦
         </Typography>
         <Typography variant="body1">
           These are up-to-date values for{' '}
@@ -35,10 +34,6 @@ const Layout = ({ children }) => {
           </em>{' '}
           is below 1.0, the virus will stop spreading. Check out our Resources
           section to learn more.
-        </Typography>
-
-        <Typography variant="body1">
-          Data last updated: MM/DD at TIME
         </Typography>
         {children}
         <Footer />

@@ -1,5 +1,6 @@
 import { fullFormatDate, getLastTimestamp, dateObjectBuider } from 'utils';
 import actionTypes from './action_types';
+import moment from 'moment';
 
 const initialState = {
   data: null,
@@ -24,15 +25,16 @@ export default (state = initialState, { payload, type }) => {
       };
 
     case actionTypes.LOAD_MODEL_SUCCESS: {
-      const lastTimestamp = getLastTimestamp(payload.data);
-      const date = dateObjectBuider(lastTimestamp);
+      const date = dateObjectBuider(payload.lastUpdatedTimestamp);
 
       return {
         ...state,
         data: {
           ...state.data,
           provinces: payload?.data,
-          lastUpdateTime: fullFormatDate(date),
+          lastUpdatedTimestamp: moment
+            .unix(payload?.lastUpdatedTimestamp)
+            .format('MMMM D YYYY, h:mm:ss a'),
         },
         loading: false,
         error: false,

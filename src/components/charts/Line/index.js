@@ -131,7 +131,7 @@ const Line = ({ data: content }) => {
       axisLeft={{
         format: (d) => d.toFixed(1),
       }}
-      axisBottom={false}
+      axisBottom={null}
       tooltip={({ point }) => <TooltipLine data={point?.data} />}
       enableArea={true}
       areaOpacity={0.0}
@@ -156,6 +156,7 @@ const Line = ({ data: content }) => {
           ticks: {
             text: {
               fill: '#777677',
+              fontFamily: 'IBM Plex Sans, sans-serif',
             },
           },
         },

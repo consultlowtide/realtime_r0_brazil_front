@@ -54,6 +54,21 @@ const RiskScatterPlot = ({ data }) => (
     {...commonProps}
     data={data}
     tooltip={({ node }) => <TooltipScatter data={node?.data} />}
+    theme={{
+      axis: {
+        ticks: {
+          text: {
+            fill: '#777677',
+            fontFamily: 'IBM Plex Sans, sans-serif',
+          },
+        },
+      },
+      grid: {
+        line: {
+          stroke: '#D8D8D8',
+        },
+      },
+    }}
   />
 );
 

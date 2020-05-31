@@ -10,6 +10,21 @@ import { getModelResults } from 'store/actions';
 
 import useStyles from './Home.styles';
 
+const Badge = ({ children }) => (
+  <div
+    style={{
+      background: 'rgba(0, 119, 191, 0.12)',
+      borderRadius: 5,
+      margin: '16px 0',
+      padding: '12px 6px',
+      width: 'max-content',
+      color: 'rgb(0, 119, 191)',
+    }}
+  >
+    {children}
+  </div>
+);
+
 const Home = () => {
   const classes = useStyles();
   const dispatch = useDispatch();
@@ -17,6 +32,9 @@ const Home = () => {
   const loading = useSelector((state) => state.loading);
   const error = useSelector((state) => state.error);
   const provinces = useSelector((state) => state.data?.provinces);
+  const lastUpdatedTimestamp = useSelector(
+    (state) => state.data?.lastUpdatedTimestamp
+  );
 
   const canRender = useCallback(
     (data) => !error && !loading && data !== undefined && data !== null,
@@ -48,18 +66,17 @@ const Home = () => {
 
   return (
     <>
-      <Section
-        description="Aggregate Provincial Rt bar chart"
-        title="Aggregate Provincial Rt bar chart"
-      >
+      <Section>
+        <Badge>
+          <Typography variant="body1">
+            Data last updated: {lastUpdatedTimestamp}
+          </Typography>
+        </Badge>
         <div className={classes.barChartWrapper}>
           {canRender(provinces) ? <Line data={provinces} /> : <Loader />}
         </div>
       </Section>
-      <Section
-        description="Per-province Rt area charts"
-        title="Per-province Rt BarChart"
-      >
+      <Section>
         <Grid
           container
           direction="column"
