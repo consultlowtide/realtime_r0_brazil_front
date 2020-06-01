@@ -30,6 +30,23 @@ const About = () => {
             values under 1.0 mean we should expect fewer.
           </Typography>
         </div>
+        <div className={classes.section}>
+        <Typography className={classes.sectionTitle} variant="h4">
+          About the Data
+        </Typography>
+        <Typography variant="body1">
+          The COVID-19 Canada Open Data Working Group collects information on
+          confirmed and presumptive positive cases of COVID-19 in Canada. Each
+          line in their dataset represents a unique case. Data is entered
+          manually and updated daily. All data is exclusively collected from
+          publicly available sources including government reports, government
+          websites, and news media.
+          <em>
+            R<sub>t</sub>
+          </em>{' '}
+          values may be delayed by a few days.
+        </Typography>
+      </div>
         <Typography className={classes.sectionTitle} variant="h4">
           Resources
         </Typography>
