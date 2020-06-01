@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container } from '@material-ui/core';
 
+import About from 'components/About';
 import Footer from 'components/Footer';
 import Typography from 'components/Typography';
 import useStyles from './Layout.styles';
@@ -36,6 +37,7 @@ const Layout = ({ children }) => {
           section to learn more.
         </Typography>
         {children}
+        <About />
         <Footer />
       </Container>
     </>
