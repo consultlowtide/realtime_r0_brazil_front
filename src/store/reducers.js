@@ -34,7 +34,7 @@ export default (state = initialState, { payload, type }) => {
           provinces: payload?.data,
           lastUpdatedTimestamp: moment
             .unix(payload?.lastUpdatedTimestamp)
-            .format('MMMM D YYYY, h:mm:ss a'),
+            .format('MMMM D YYYY @ h:mm a'),
         },
         loading: false,
         error: false,
