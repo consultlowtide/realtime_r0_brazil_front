@@ -16,10 +16,10 @@ const About = () => {
             <em>
               R<sub>t</sub>
             </em>{' '}
-            and how do we calculate it?
+            ?
           </Typography>
           <Typography variant="body1">
-            The metric being tracked here (
+            The metric being tracked here ({' '}
             <em>
               R<sub>t</sub>
             </em>{' '}
@@ -32,15 +32,20 @@ const About = () => {
         </div>
         <div className={classes.section}>
         <Typography className={classes.sectionTitle} variant="h4">
-          About the Data
+          Calculating{' '}
+          <em>
+            R<sub>t</sub>
+          </em>{' '}
         </Typography>
         <Typography variant="body1">
-          The COVID-19 Canada Open Data Working Group collects information on
-          confirmed and presumptive positive cases of COVID-19 in Canada. Each
-          line in their dataset represents a unique case. Data is entered
-          manually and updated daily. All data is exclusively collected from
-          publicly available sources including government reports, government
-          websites, and news media.
+          Our Rt model for COVID-19 in Canada is an adaptation of loft.science's
+          Rt model for Brazil which an adaptation of Kevin Systrom and his 
+          team's model for the USA. We used the Rt model from Brazil as a 
+          foundation because of the similarities between Canadian and Brazilian 
+          data sets which was adapted from the original American model. 
+          We’ve since improved the confidence and reliability of our model to 
+          parity with that of the American model. 
+
           <em>
             R<sub>t</sub>
           </em>{' '}
