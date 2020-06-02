@@ -19,7 +19,7 @@ const About = () => {
             ?
           </Typography>
           <Typography variant="body1">
-            The metric being tracked here ({' '}
+            The metric being tracked here (
             <em>
               R<sub>t</sub>
             </em>{' '}
@@ -38,26 +38,55 @@ const About = () => {
           </em>{' '}
         </Typography>
         <Typography variant="body1">
-          Our Rt model for COVID-19 in Canada is an adaptation of loft.science's
-          Rt model for Brazil which an adaptation of Kevin Systrom and his 
-          team's model for the USA. We used the Rt model from Brazil as a 
-          foundation because of the similarities between Canadian and Brazilian 
-          data sets which was adapted from the original American model. 
-          We’ve since improved the confidence and reliability of our model to 
-          parity with that of the American model. 
-
+          Our
           <em>
             R<sub>t</sub>
           </em>{' '}
-          values may be delayed by a few days.
+          model for COVID-19 in Canada is an adaptation of loft.science's
+          <em>
+            R<sub>t</sub>
+          </em>{' '}
+          model for Brazil which an adaptation of Kevin Systrom and his 
+          team's model for the USA. We used the 
+          <em>
+            R<sub>t</sub>
+          </em>{' '}
+          model from Brazil as a foundation because of the similarities 
+          between Canadian and Brazilian data sets which was adapted from 
+          the original American model. We’ve since improved the confidence
+          and reliability of our model to parity with that of the American model. 
         </Typography>
       </div>
+      <div className={classes.section}>
+        <Typography className={classes.sectionTitle} variant="h4">
+          Wait Why Isn’t My Province/Territory Listed?
+        </Typography>
+        <Typography variant="body1">
+          Canada is a HUGE country and some areas are sparsely populated 
+          compared to other parts of North America. If your province or 
+          territory isn’t listed that’s because we don’t have enough 
+          data from your particular region to make make a statistical 
+          prediction we can feel confident about. 
+        </Typography>
+      </div>
+      <div className={classes.section}>
+        <Typography className={classes.sectionTitle} variant="h4">
+          About the Data
+        </Typography>
+        <Typography variant="body1">
+          The COVID-19 Canada Open Data Working Group collects information on 
+          confirmed and presumptive positive cases of COVID-19 in Canada. 
+          Each line in their dataset represents a unique case. Data is 
+          entered manually and updated daily. All data is exclusively 
+          collected from publicly available sources including government 
+          reports, government websites, and news media.   
+        </Typography>
+      </div>   
         <Typography className={classes.sectionTitle} variant="h4">
           Resources
         </Typography>
-
         <Typography className={classes.sectionTitle} variant="h5">
-          rt-canada.ca
+          rt-canada.ca 🇨🇦
         </Typography>
         <ul>
           <li>
@@ -70,21 +99,7 @@ const About = () => {
               <em>
                 R<sub>t</sub>
               </em>{' '}
-              for Canada
-            </Typography>
-          </li>
-
-          <li>
-            <Typography variant="body1">
-              Download{' '}
-              <Link target="_blank" color="primary" href="#">
-                calculated{' '}
-                <em>
-                  R<sub>t</sub>
-                </em>{' '}
-                values
-              </Link>{' '}
-              per province/territory
+              for Canada.
             </Typography>
           </li>
 
@@ -97,7 +112,7 @@ const About = () => {
               >
                 National case count data{' '}
               </Link>{' '}
-              from{' '}
+              from the{' '}
               <Link
                 target="_blank"
                 color="primary"
@@ -105,6 +120,7 @@ const About = () => {
               >
                 COVID-19 Canada Open Data Working Group{' '}
               </Link>{' '}
+              .
             </Typography>
           </li>
 
@@ -115,16 +131,14 @@ const About = () => {
                 color="primary"
                 href="https://github.com/consultlowtide/rt-canada"
               >
-                GitHub repository
+                Our GitHub repository
               </Link>{' '}
               with the front end code for this site.
             </Typography>
           </li>
         </ul>
-        <Typography className={classes.sectionTitle} variant="h5">
-          <Link target="_blank" href="https://rt.live">
-            rt.live
-          </Link>{' '}
+        <Typography className={classes.sectionTitle} variant="h5">  
+            rt.live 🇺🇸
         </Typography>
         <ul>
           <li>
