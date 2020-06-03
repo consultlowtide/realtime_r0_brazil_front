@@ -110,7 +110,7 @@ const About = () => {
                 color="primary"
                 href="https://raw.githubusercontent.com/ishaberry/Covid19Canada/master/cases.csv"
               >
-                National case count data{' '}
+                National case count data
               </Link>{' '}
               from the{' '}
               <Link
@@ -118,7 +118,7 @@ const About = () => {
                 color="primary"
                 href="https://www.cmaj.ca/content/192/15/E420"
               >
-                COVID-19 Canada Open Data Working Group{' '}
+                COVID-19 Canada Open Data Working Group
               </Link>{' '}
               .
             </Typography>
@@ -156,7 +156,7 @@ const About = () => {
           </li>
           <li>
             <Typography variant="body1">
-                Kevin Systrom and Thomas Vladeck's
+                Kevin Systrom and Thomas Vladeck's{' '}
                   <Link
                     target="_blank"
                     color="primary"
@@ -282,6 +282,11 @@ const About = () => {
             Ryan Neufeld
           </Link>
           .
+        </Typography>
+      </div>
+      <div className={classes.section} align="right">
+        <Typography variant="body1">
+          Made in Toronto and San Francisco with ❤️🍁🥞 
         </Typography>
       </div>
     </section>
