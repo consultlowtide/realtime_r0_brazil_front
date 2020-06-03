@@ -68,7 +68,7 @@ const Home = () => {
     <>
       <Section>
         <Badge>
-          <Typography variant="body1">
+          <Typography variant="body2">
             Data last updated: {lastUpdatedTimestamp}
           </Typography>
         </Badge>
