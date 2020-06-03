@@ -85,9 +85,9 @@ const BoxChart = ({
   return (
     <div className={classes.root}>
       <header className={classes.header}>
-        <Typography variant="h2">{CANADIAN_PROVINCES[id]}</Typography>
+        <Typography variant="h4">{CANADIAN_PROVINCES[id]}</Typography>
         <Typography
-          variant="h4"
+          variant="h3"
           color={getLastRtValue(rtData, id) < 1 ? 'secondary' : 'error'}
         >
           <strong>{getLastRtValue(rtData, id)}</strong>

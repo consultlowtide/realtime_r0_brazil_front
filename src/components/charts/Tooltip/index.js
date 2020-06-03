@@ -19,7 +19,7 @@ const Tooltip = ({ children, data = {} }) => {
       <Typography variant="caption">
         <strong>{CANADIAN_PROVINCES[data?.province]}</strong>
       </Typography>
-      <Typography variant="caption">{rtValue().toFixed(2)}</Typography>
+      <Typography variant="h3">{rtValue().toFixed(2)}</Typography>
       <br />
       <Typography variant="caption">
         High:{' '}
