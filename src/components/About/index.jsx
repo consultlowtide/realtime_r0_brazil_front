@@ -31,57 +31,57 @@ const About = () => {
           </Typography>
         </div>
         <div className={classes.section}>
-        <Typography className={classes.sectionTitle} variant="h2">
-          Calculating{' '}
-          <em>
-            R<sub>t</sub>
-          </em>{' '}
-        </Typography>
-        <Typography variant="body1">
-          Our
-          <em>
-            R<sub>t</sub>
-          </em>{' '}
-          model for COVID-19 in Canada is an adaptation of loft.science's
-          <em>
-            R<sub>t</sub>
-          </em>{' '}
-          model for Brazil which an adaptation of Kevin Systrom and his 
-          team's model for the USA. We used the 
-          <em>
-            R<sub>t</sub>
-          </em>{' '}
-          model from Brazil as a foundation because of the similarities 
-          between Canadian and Brazilian data sets which was adapted from 
-          the original American model. We’ve since improved the confidence
-          and reliability of our model to parity with that of the American model. 
-        </Typography>
-      </div>
-      <div className={classes.section}>
-        <Typography className={classes.sectionTitle} variant="h2">
-          Wait Why Isn’t My Province/Territory Listed?
-        </Typography>
-        <Typography variant="body1">
-          Canada is a HUGE country and some areas are sparsely populated 
-          compared to other parts of North America. If your province or 
-          territory isn’t listed that’s because we don’t have enough 
-          data from your particular region to make make a statistical 
-          prediction we can feel confident about. 
-        </Typography>
-      </div>
-      <div className={classes.section}>
-        <Typography className={classes.sectionTitle} variant="h2">
-          About the Data
-        </Typography>
-        <Typography variant="body1">
-          The COVID-19 Canada Open Data Working Group collects information on 
-          confirmed and presumptive positive cases of COVID-19 in Canada. 
-          Each line in their dataset represents a unique case. Data is 
-          entered manually and updated daily. All data is exclusively 
-          collected from publicly available sources including government 
-          reports, government websites, and news media.   
-        </Typography>
-      </div>   
+          <Typography className={classes.sectionTitle} variant="h2">
+            Calculating{' '}
+            <em>
+              R<sub>t</sub>
+            </em>{' '}
+          </Typography>
+          <Typography variant="body1">
+            Our
+            <em>
+              R<sub>t</sub>
+            </em>{' '}
+            model for COVID-19 in Canada is an adaptation of loft.science's
+            <em>
+              R<sub>t</sub>
+            </em>{' '}
+            model for Brazil which an adaptation of Kevin Systrom and his team's
+            model for the USA. We used the
+            <em>
+              R<sub>t</sub>
+            </em>{' '}
+            model from Brazil as a foundation because of the similarities
+            between Canadian and Brazilian data sets which was adapted from the
+            original American model. We’ve since improved the confidence and
+            reliability of our model to parity with that of the American model.
+          </Typography>
+        </div>
+        <div className={classes.section}>
+          <Typography className={classes.sectionTitle} variant="h2">
+            Wait Why Isn’t My Province/Territory Listed?
+          </Typography>
+          <Typography variant="body1">
+            Canada is a HUGE country and some areas are sparsely populated
+            compared to other parts of North America. If your province or
+            territory isn’t listed that’s because we don’t have enough data from
+            your particular region to make make a statistical prediction we can
+            feel confident about.
+          </Typography>
+        </div>
+        <div className={classes.section}>
+          <Typography className={classes.sectionTitle} variant="h2">
+            About the Data
+          </Typography>
+          <Typography variant="body1">
+            The COVID-19 Canada Open Data Working Group collects information on
+            confirmed and presumptive positive cases of COVID-19 in Canada. Each
+            line in their dataset represents a unique case. Data is entered
+            manually and updated daily. All data is exclusively collected from
+            publicly available sources including government reports, government
+            websites, and news media.
+          </Typography>
+        </div>
         <Typography className={classes.sectionTitle} variant="h2">
           Resources
         </Typography>
@@ -92,7 +92,11 @@ const About = () => {
           <li>
             <Typography variant="body1">
               Download our{' '}
-              <Link target="_blank" color="primary" href="https://github.com/ivanpeng/rt_covid_ca/blob/master/notebooks/RT-CA%20MCMC.ipynb">
+              <Link
+                target="_blank"
+                color="primary"
+                href="https://github.com/ivanpeng/rt_covid_ca/blob/master/notebooks/RT-CA%20MCMC.ipynb"
+              >
                 Jupyter notebook
               </Link>{' '}
               to see how we're calculating{' '}
@@ -137,38 +141,34 @@ const About = () => {
             </Typography>
           </li>
         </ul>
-        <Typography className={classes.sectionTitle} variant="h5">  
-            rt.live 🇺🇸
+        <Typography className={classes.sectionTitle} variant="h5">
+          rt.live 🇺🇸
         </Typography>
         <ul>
           <li>
             <Typography variant="body1">
-              Check out{' '} 
-                <Link
-                  target="_blank"
-                  color="primary"
-                  href="https://rt.live/"
-                >
-                    rt.live
-                </Link>
+              Check out{' '}
+              <Link target="_blank" color="primary" href="https://rt.live/">
+                rt.live
+              </Link>
               .
             </Typography>
           </li>
           <li>
             <Typography variant="body1">
-                Kevin Systrom and Thomas Vladeck's{' '}
-                  <Link
-                    target="_blank"
-                    color="primary"
-                    href="https://github.com/k-sys/covid-19/blob/master/Realtime%20Rt%20mcmc.ipynb"
-                  >
-                    Jupyter notebook
-                  </Link>{' '}
-                with their methodology for calculating{' '}
-                <em>
-                  R<sub>t</sub>
-                </em>
-                .
+              Kevin Systrom and Thomas Vladeck's{' '}
+              <Link
+                target="_blank"
+                color="primary"
+                href="https://github.com/k-sys/covid-19/blob/master/Realtime%20Rt%20mcmc.ipynb"
+              >
+                Jupyter notebook
+              </Link>{' '}
+              with their methodology for calculating{' '}
+              <em>
+                R<sub>t</sub>
+              </em>
+              .
             </Typography>
           </li>
           <li>
@@ -203,14 +203,14 @@ const About = () => {
         <ul>
           <li>
             <Typography variant="body1">
-              Check out{' '} 
-                <Link
-                  target="_blank"
-                  color="primary"
-                  href="https://loft.science/"
-                >
-                    loft.science
-                </Link>
+              Check out{' '}
+              <Link
+                target="_blank"
+                color="primary"
+                href="https://loft.science/"
+              >
+                loft.science
+              </Link>
               .
             </Typography>
           </li>
@@ -286,7 +286,7 @@ const About = () => {
       </div>
       <div className={classes.section} align="right">
         <Typography variant="body1">
-          Made in Toronto and San Francisco with ❤️🍁🥞 
+          Made in Toronto and San Francisco with ❤️🍁🥞
         </Typography>
       </div>
     </section>
