@@ -1,13 +1,13 @@
 import React from 'react';
 import { ResponsiveLine } from '@nivo/line';
-import Typography from 'components/Typography';
 import LineLayer from 'components/charts/LineLayer';
 import TooltipLine from './TooltipLine';
 import { formatBarChartData } from 'utils';
 
 const commonProperties = {
-  width: 1200,
-  margin: { top: 20, right: 20, bottom: 60, left: 80 },
+  // width: 1000,
+  margin: { top: 20, right: 20, bottom: 60, left: 30 },
+  padding: { right: 20 },
   animate: true,
   enableSlices: 'x',
 };
@@ -132,9 +132,9 @@ const Line = ({ data: content }) => {
       }}
       pointLabelYOffset={0}
       enableGridX={false}
-      xScale={{
-        type: 'linear',
-      }}
+      // xScale={{
+      //   type: 'point',
+      // }}
       yScale={{
         type: 'linear',
         stacked: false,
