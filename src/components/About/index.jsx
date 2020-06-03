@@ -284,11 +284,6 @@ const About = () => {
           .
         </Typography>
       </div>
-      <div className={classes.section} align="right">
-        <Typography variant="body1">
-          Made in Toronto and San Francisco with ❤️🍁🥞
-        </Typography>
-      </div>
     </section>
   );
 };
