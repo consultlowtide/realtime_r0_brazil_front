@@ -277,7 +277,7 @@ const About = () => {
           <Link
             target="_blank"
             color="primary"
-            http://ryanneufeld.design/"
+            href="http://ryanneufeld.design/"
           >
             Ryan Neufeld
           </Link>
