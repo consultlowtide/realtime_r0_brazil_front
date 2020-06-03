@@ -11,7 +11,7 @@ const About = () => {
     <section className={classes.container}>
       <div className={classes.section}>
         <div className={classes.section}>
-          <Typography className={classes.sectionTitle} variant="h4">
+          <Typography className={classes.sectionTitle} variant="h2">
             What is{' '}
             <em>
               R<sub>t</sub>
@@ -31,7 +31,7 @@ const About = () => {
           </Typography>
         </div>
         <div className={classes.section}>
-        <Typography className={classes.sectionTitle} variant="h4">
+        <Typography className={classes.sectionTitle} variant="h2">
           Calculating{' '}
           <em>
             R<sub>t</sub>
@@ -58,7 +58,7 @@ const About = () => {
         </Typography>
       </div>
       <div className={classes.section}>
-        <Typography className={classes.sectionTitle} variant="h4">
+        <Typography className={classes.sectionTitle} variant="h2">
           Wait Why Isn’t My Province/Territory Listed?
         </Typography>
         <Typography variant="body1">
@@ -70,7 +70,7 @@ const About = () => {
         </Typography>
       </div>
       <div className={classes.section}>
-        <Typography className={classes.sectionTitle} variant="h4">
+        <Typography className={classes.sectionTitle} variant="h2">
           About the Data
         </Typography>
         <Typography variant="body1">
@@ -82,7 +82,7 @@ const About = () => {
           reports, government websites, and news media.   
         </Typography>
       </div>   
-        <Typography className={classes.sectionTitle} variant="h4">
+        <Typography className={classes.sectionTitle} variant="h2">
           Resources
         </Typography>
         <Typography className={classes.sectionTitle} variant="h5">
@@ -92,7 +92,7 @@ const About = () => {
           <li>
             <Typography variant="body1">
               Download our{' '}
-              <Link target="_blank" color="primary" href="#">
+              <Link target="_blank" color="primary" href="https://github.com/ivanpeng/rt_covid_ca/blob/master/notebooks/RT-CA%20MCMC.ipynb">
                 Jupyter notebook
               </Link>{' '}
               to see how we're calculating{' '}
@@ -143,33 +143,32 @@ const About = () => {
         <ul>
           <li>
             <Typography variant="body1">
-              <Link
-                target="_blank"
-                color="primary"
-                href="https://twitter.com/kevin"
-              >
-                Kevin Systrom
-              </Link>{' '}
-              and{' '}
-              <Link
-                target="_blank"
-                color="primary"
-                href="https://twitter.com/tvladeck"
-              >
-                Thomas Vladeck
-              </Link>
-              's{' '}
-              <Link
-                target="_blank"
-                color="primary"
-                href="https://github.com/k-sys/covid-19/blob/master/Realtime%20Rt%20mcmc.ipynb"
-              >
-                Jupyter notebook
-              </Link>{' '}
-              with their methodology for calculating{' '}
-              <em>
-                R<sub>t</sub>
-              </em>
+              Check out{' '} 
+                <Link
+                  target="_blank"
+                  color="primary"
+                  href="https://rt.live/"
+                >
+                    rt.live
+                </Link>
+              .
+            </Typography>
+          </li>
+          <li>
+            <Typography variant="body1">
+                Kevin Systrom and Thomas Vladeck's
+                  <Link
+                    target="_blank"
+                    color="primary"
+                    href="https://github.com/k-sys/covid-19/blob/master/Realtime%20Rt%20mcmc.ipynb"
+                  >
+                    Jupyter notebook
+                  </Link>{' '}
+                with their methodology for calculating{' '}
+                <em>
+                  R<sub>t</sub>
+                </em>
+                .
             </Typography>
           </li>
           <li>
@@ -181,6 +180,7 @@ const About = () => {
               >
                 The Metric We Need to Manage COVID-19
               </Link>
+              .
             </Typography>
           </li>
           <li>
@@ -192,16 +192,28 @@ const About = () => {
               >
                 The Numbers Behind Social Distancing
               </Link>
+              .
             </Typography>
           </li>
         </ul>
 
         <Typography className={classes.sectionTitle} variant="h5">
-          <Link target="_blank" href="https://loft.science">
-            loft.science
-          </Link>{' '}
+          loft.science 🇧🇷
         </Typography>
         <ul>
+          <li>
+            <Typography variant="body1">
+              Check out{' '} 
+                <Link
+                  target="_blank"
+                  color="primary"
+                  href="https://loft.science/"
+                >
+                    loft.science
+                </Link>
+              .
+            </Typography>
+          </li>
           <li>
             <Typography variant="body1">
               Loft's{' '}
@@ -216,7 +228,7 @@ const About = () => {
               <em>
                 R<sub>t</sub>
               </em>{' '}
-              calculation methodology for Brazil{' '}
+              calculation methodology for Brazil.{' '}
             </Typography>
           </li>
           <li>
@@ -229,33 +241,13 @@ const About = () => {
               >
                 GitHub repository
               </Link>{' '}
-              with their front end code for{' '}
-              <Link target="_blank" color="primary" href="https://loft.science">
-                loft.science
-              </Link>{' '}
+              with their front end code for loft.science.{' '}
             </Typography>
           </li>
         </ul>
       </div>
       <div className={classes.section}>
-        <Typography className={classes.sectionTitle} variant="h4">
-          About the Data
-        </Typography>
-        <Typography variant="body1">
-          The COVID-19 Canada Open Data Working Group collects information on
-          confirmed and presumptive positive cases of COVID-19 in Canada. Each
-          line in their dataset represents a unique case. Data is entered
-          manually and updated daily. All data is exclusively collected from
-          publicly available sources including government reports, government
-          websites, and news media.
-          <em>
-            R<sub>t</sub>
-          </em>{' '}
-          values may be delayed by a few days.
-        </Typography>
-      </div>
-      <div className={classes.section}>
-        <Typography className={classes.sectionTitle} variant="h4">
+        <Typography className={classes.sectionTitle} variant="h2">
           Acknowledgements
         </Typography>
         <Typography variant="body1">
@@ -267,6 +259,7 @@ const About = () => {
           >
             Ivan Peng
           </Link>{' '}
+          .
         </Typography>
         <Typography>
           Built by{' '}
@@ -277,16 +270,18 @@ const About = () => {
           >
             Martin Laws
           </Link>
+          .
         </Typography>
         <Typography variant="body1">
           Designed by{' '}
           <Link
             target="_blank"
             color="primary"
-            href="https://www.linkedin.com/in/iamryanneufeld/"
+            http://ryanneufeld.design/"
           >
             Ryan Neufeld
           </Link>
+          .
         </Typography>
       </div>
     </section>
