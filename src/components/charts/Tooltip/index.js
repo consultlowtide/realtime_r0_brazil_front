@@ -5,8 +5,8 @@ import { Typography, Paper } from '@material-ui/core';
 import useStyles from './Tooltip.styles';
 import { CANADIAN_PROVINCES } from 'utils';
 
-const RED = '#f9e7e7';
-const GREEN = '#c3f5c3';
+const RED = 'rgb(230, 79, 64)';
+const GREEN = 'rgb(60, 182, 108)';
 
 const Tooltip = ({ children, data = {} }) => {
   const classes = useStyles();
@@ -16,10 +16,14 @@ const Tooltip = ({ children, data = {} }) => {
   return (
     <Paper variant="outlined" elevation={3} className={classes.root}>
       {children}
-      <Typography variant="caption">
-        <strong>{CANADIAN_PROVINCES[data?.province]}</strong>
+      <Typography variant="subtitle">
+        <strong>
+          {CANADIAN_PROVINCES[data?.province]}{' '}
+          <span style={{ color: getColor(rtValue()) }}>
+            {rtValue().toFixed(2)}
+          </span>
+        </strong>
       </Typography>
-      <Typography variant="h3">{rtValue().toFixed(2)}</Typography>
       <br />
       <Typography variant="caption">
         High:{' '}

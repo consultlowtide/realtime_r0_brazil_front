@@ -1,13 +1,13 @@
 import React from 'react';
 import { ResponsiveLine } from '@nivo/line';
-
 import LineLayer from 'components/charts/LineLayer';
 import TooltipLine from './TooltipLine';
 import { formatBarChartData } from 'utils';
 
 const commonProperties = {
-  width: 1200,
-  margin: { top: 20, right: 20, bottom: 60, left: 80 },
+  // width: 1000,
+  margin: { top: 20, right: 20, bottom: 60, left: 30 },
+  padding: { right: 20 },
   animate: true,
   enableSlices: 'x',
 };
@@ -27,33 +27,47 @@ const compare = (a, b) => {
   return comparison;
 };
 
-const CustomSymbol = ({ size, color, borderWidth, borderColor, ...rest }) => {
+const CustomSymbol = ({
+  size,
+  color,
+  borderWidth = 12,
+  borderColor,
+  ...rest
+}) => {
   const height = (rest.datum.high - rest.datum.low) * 100;
 
   return (
     <g>
       <rect
-        width={8}
+        width={16}
         rx="5"
-        x="-4"
+        x="0"
         height={height}
         y={(-(rest.datum.high - rest.datum.low) * 100) / 2}
         fill={rest.datum.y > 1 ? '#FFDAD2' : '#C7F5C0'}
       />
       <div>{rest.datum.id}</div>
-      <circle
+      <rect
         fill="#fff"
-        r={size / 2}
-        strokeWidth={borderWidth}
+        width="25px"
+        height="14px"
+        rx="7"
+        x="-4"
+        y="0"
+        strokeWidth="1"
         stroke={rest.datum.y > 1 ? '#ED6453' : '#40CC7E'}
       />
-      <circle
-        r={size / 5}
-        strokeWidth={borderWidth}
-        stroke={rest.datum.y > 1 ? '#ED6453' : '#40CC7E'}
+      {/* <ellipse cx="4" cy="6" rx="24" ry="12" style={{ position: 'relative' }}> */}
+      <text
+        x="0"
+        y="11"
+        width="auto"
+        style={{ fontSize: '12px' }}
         fill={rest.datum.y > 1 ? '#ED6453' : '#40CC7E'}
-        fillOpacity={0.35}
-      />
+      >
+        {rest.datum.province}
+      </text>
+      {/* </ellipse> */}
     </g>
   );
 };
@@ -108,20 +122,19 @@ const Line = ({ data: content }) => {
       {...commonProperties}
       data={chartData}
       curve="monotoneX"
-      enablePointLabel
       pointSymbol={CustomSymbol}
       pointLabel="id"
       pointSize={14}
-      pointBorderWidth={1}
+      pointBorderWidth={4}
       pointBorderColor={{
         from: 'color',
         modifiers: [['darker', 0.3]],
       }}
-      pointLabelYOffset={-20}
+      pointLabelYOffset={0}
       enableGridX={false}
-      xScale={{
-        type: 'linear',
-      }}
+      // xScale={{
+      //   type: 'point',
+      // }}
       yScale={{
         type: 'linear',
         stacked: false,
