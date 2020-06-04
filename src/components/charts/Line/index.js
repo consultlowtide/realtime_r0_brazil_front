@@ -39,8 +39,8 @@ const CustomSymbol = ({
     <g>
       <rect
         width={12}
-        rx={6}
-        x={6}
+        rx={12}
+        x={-6}
         height={height}
         y={(-(rest.datum.high - rest.datum.low) * 100) / 2}
         fill={rest.datum.y > 1 ? '#FFDAD2' : '#C7F5C0'}
@@ -51,14 +51,14 @@ const CustomSymbol = ({
         width={25}
         height={15}
         rx={7}
-        x={0}
+        x={-12}
         y={0}
         strokeWidth={1}
         stroke={rest.datum.y > 1 ? '#ED6453' : '#40CC7E'}
       />
       {/* <ellipse cx="4" cy="6" rx="24" ry="12" style={{ position: 'relative' }}> */}
       <text
-        x={4}
+        x={-8}
         y={12}
         width="auto"
         style={{ fontSize: '12px' }}
@@ -141,6 +141,7 @@ const Line = ({ data: content }) => {
       }}
       axisLeft={{
         format: (d) => d.toFixed(1),
+        tickPadding: 20,
       }}
       axisBottom={null}
       tooltip={({ point }) => <TooltipLine data={point?.data} />}
