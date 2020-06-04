@@ -8,7 +8,7 @@ const commonProperties = {
   // width: 1000,
   margin: { top: 20, right: 100, bottom: 60, left: 70 },
   animate: true,
-  enableSlices: 'x',
+  enableSlices: false,
 };
 
 const compare = (a, b) => {
@@ -146,7 +146,6 @@ const Line = ({ data: content }) => {
       tooltip={({ point }) => <TooltipLine data={point?.data} />}
       enableArea={false}
       areaOpacity={0.0}
-      enableSlices={false}
       useMesh={true}
       crosshairType="cross"
       lineWidth={0}
