@@ -7,7 +7,6 @@ import { formatBarChartData } from 'utils';
 const commonProperties = {
   // width: 1000,
   margin: { top: 20, right: 20, bottom: 60, left: 30 },
-  padding: { right: 20 },
   animate: true,
   enableSlices: 'x',
 };
@@ -40,8 +39,8 @@ const CustomSymbol = ({
     <g>
       <rect
         width={12}
-        rx="6"
-        x="0"
+        rx={6}
+        x={6}
         height={height}
         y={(-(rest.datum.high - rest.datum.low) * 100) / 2}
         fill={rest.datum.y > 1 ? '#FFDAD2' : '#C7F5C0'}
@@ -51,16 +50,16 @@ const CustomSymbol = ({
         fill="#fff"
         width={25}
         height={15}
-        rx="7"
-        x="-6"
-        y="0"
-        strokeWidth="1"
+        rx={7}
+        x={0}
+        y={0}
+        strokeWidth={1}
         stroke={rest.datum.y > 1 ? '#ED6453' : '#40CC7E'}
       />
       {/* <ellipse cx="4" cy="6" rx="24" ry="12" style={{ position: 'relative' }}> */}
       <text
-        x="-2"
-        y="12"
+        x={4}
+        y={12}
         width="auto"
         style={{ fontSize: '12px' }}
         fill={rest.datum.y > 1 ? '#ED6453' : '#40CC7E'}
@@ -132,9 +131,9 @@ const Line = ({ data: content }) => {
       }}
       pointLabelYOffset={0}
       enableGridX={false}
-      // xScale={{
-      //   type: 'point',
-      // }}
+      xScale={{
+        type: 'point',
+      }}
       yScale={{
         type: 'linear',
         stacked: false,
@@ -146,7 +145,7 @@ const Line = ({ data: content }) => {
       }}
       axisBottom={null}
       tooltip={({ point }) => <TooltipLine data={point?.data} />}
-      enableArea={true}
+      enableArea={false}
       areaOpacity={0.0}
       enableSlices={false}
       useMesh={true}
@@ -157,7 +156,6 @@ const Line = ({ data: content }) => {
         LineLayer,
         'axes',
         'markers',
-        'areas',
         'lines',
         'points',
         'slices',

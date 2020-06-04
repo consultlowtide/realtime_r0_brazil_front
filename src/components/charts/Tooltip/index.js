@@ -16,7 +16,7 @@ const Tooltip = ({ children, data = {} }) => {
   return (
     <Paper variant="outlined" elevation={3} className={classes.root}>
       {children}
-      <Typography variant="subtitle">
+      <Typography variant="subtitle1">
         <strong>
           {CANADIAN_PROVINCES[data?.province]}{' '}
           <span style={{ color: getColor(rtValue()) }}>
@@ -24,7 +24,6 @@ const Tooltip = ({ children, data = {} }) => {
           </span>
         </strong>
       </Typography>
-      <br />
       <Typography variant="caption">
         High:{' '}
         <span style={{ color: getColor(data?.high) }}>
