@@ -258,8 +258,7 @@ const About = () => {
             href="https://github.com/ivanpeng"
           >
             Ivan Peng
-          </Link>{' '}
-          .
+          </Link>
         </Typography>
         <Typography>
           Built by{' '}
@@ -270,7 +269,6 @@ const About = () => {
           >
             Martin Laws
           </Link>
-          .
         </Typography>
         <Typography variant="body1">
           Designed by{' '}
@@ -281,7 +279,6 @@ const About = () => {
           >
             Ryan Neufeld
           </Link>
-          .
         </Typography>
       </div>
     </section>

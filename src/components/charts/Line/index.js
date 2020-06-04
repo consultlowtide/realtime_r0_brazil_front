@@ -39,8 +39,8 @@ const CustomSymbol = ({
   return (
     <g>
       <rect
-        width={16}
-        rx="5"
+        width={12}
+        rx="6"
         x="0"
         height={height}
         y={(-(rest.datum.high - rest.datum.low) * 100) / 2}
@@ -49,18 +49,18 @@ const CustomSymbol = ({
       <div>{rest.datum.id}</div>
       <rect
         fill="#fff"
-        width="25px"
-        height="14px"
+        width={25}
+        height={15}
         rx="7"
-        x="-4"
+        x="-6"
         y="0"
         strokeWidth="1"
         stroke={rest.datum.y > 1 ? '#ED6453' : '#40CC7E'}
       />
       {/* <ellipse cx="4" cy="6" rx="24" ry="12" style={{ position: 'relative' }}> */}
       <text
-        x="0"
-        y="11"
+        x="-2"
+        y="12"
         width="auto"
         style={{ fontSize: '12px' }}
         fill={rest.datum.y > 1 ? '#ED6453' : '#40CC7E'}
