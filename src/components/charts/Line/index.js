@@ -6,7 +6,7 @@ import { formatBarChartData } from 'utils';
 
 const commonProperties = {
   // width: 1000,
-  margin: { top: 20, right: 20, bottom: 60, left: 30 },
+  margin: { top: 20, right: 100, bottom: 60, left: 70 },
   animate: true,
   enableSlices: 'x',
 };
@@ -129,7 +129,6 @@ const Line = ({ data: content }) => {
         from: 'color',
         modifiers: [['darker', 0.3]],
       }}
-      pointLabelYOffset={0}
       enableGridX={false}
       xScale={{
         type: 'point',
