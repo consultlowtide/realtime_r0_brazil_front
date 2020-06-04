@@ -1,43 +1,19 @@
-import React, {
-  memo,
-  // useState
-} from 'react';
+import React, { memo } from 'react';
 import { Grid, Typography } from '@material-ui/core';
 
-import {
-  getLastRtValue,
-  formatListData,
-  // formatNewCasesData,
-  // formatNewDeathsData,
-  // formatSmoothedCasesData,
-  // formatSmoothedDeathsData,
-  CANADIAN_PROVINCES,
-} from 'utils';
+import { getLastRtValue, formatListData, CANADIAN_PROVINCES } from 'utils';
 
-import {
-  // CasesLine,
-  //DeathsLine,
-  RiskScatterPlot,
-} from 'components/charts';
-// import StickyButtonGroup from 'components/StickyButtonGroup';
+import { RiskScatterPlot } from 'components/charts';
 
 import useStyles from './RiskList.styles';
 
 const RiskList = ({ data: content }) => {
-  // const classes = useStyles();
   const rtData = formatListData(content);
-  // const newCases = formatNewCasesData(content);
-  // const smoothedCases = formatSmoothedCasesData(content);
-  // const newDeaths = formatNewDeathsData(content);
-  // const smoothedDeaths = formatSmoothedDeathsData(content);
 
   const chartActive = 'rt';
-  // const [chartActive, setChartActive] = useState('rt');
-  // const handleClick = (value) => setChartActive(value);
 
   return (
     <>
-      {/* <StickyButtonGroup chartActive={chartActive} onClick={handleClick} /> */}
       <Grid
         container
         direction="row"
@@ -55,15 +31,7 @@ const RiskList = ({ data: content }) => {
             lg={3}
             xs
           >
-            <BoxChart
-              chartActive={chartActive}
-              // newCases={newCases}
-              // newDeaths={newDeaths}
-              // smoothedCases={smoothedCases}
-              // smoothedDeaths={smoothedDeaths}
-              rtData={rtData}
-              id={id}
-            />
+            <BoxChart chartActive={chartActive} rtData={rtData} id={id} />
           </Grid>
         ))}
       </Grid>
@@ -96,22 +64,6 @@ const BoxChart = ({
       {
         {
           rt: <RiskScatterPlot data={[{ id, data: rtData[id] }]} />,
-          // cases: (
-          //   <CasesLine
-          //     data={[
-          //       { id: 'smoothed', data: smoothedCases[id] },
-          //       { id: 'new', data: newCases[id] },
-          //     ]}
-          //   />
-          // ),
-          // death: (
-          //   <DeathsLine
-          //     data={[
-          //       { id: 'smoothed', data: smoothedDeaths[id] },
-          //       { id: 'new', data: newDeaths[id] },
-          //     ]}
-          //   />
-          // ),
         }[chartActive || 'rt']
       }
     </div>

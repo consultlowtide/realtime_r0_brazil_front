@@ -14,7 +14,7 @@ const commonProps = {
   width: 300,
   height: 200,
   margin: { top: 10, right: 30, bottom: 10, left: 10 },
-  nodeSize: 5,
+  nodeSize: 2,
   blendMode: 'normal',
   yScale: {
     type: 'linear',
@@ -29,7 +29,7 @@ const commonProps = {
   axisLeft: null,
   axisRight: {
     orient: 'left',
-    tickSize: 5,
+    tickSize: 2,
     tickValues: 5,
     tickPadding: 5,
     tickRotation: 0,

@@ -8,6 +8,8 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 300,
     justifyContent: 'space-between',
     alignItems: 'center',
+    margin: '0 0 20px 10px',
+    paddingRight: 10,
   },
 
   root: {
