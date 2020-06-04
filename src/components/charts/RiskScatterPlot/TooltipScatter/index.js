@@ -5,11 +5,7 @@ import { formatDate } from 'utils';
 import Tooltip from 'components/charts/Tooltip';
 
 const TooltipScatter = ({ data }) => (
-  <Tooltip data={data}>
-    <Typography variant="caption">
-      <strong>Date {formatDate(data?.date)}</strong>
-    </Typography>
-  </Tooltip>
+  <Tooltip data={data} date={formatDate(data?.date)} />
 );
 
 export default TooltipScatter;

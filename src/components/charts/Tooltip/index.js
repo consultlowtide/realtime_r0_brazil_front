@@ -8,14 +8,13 @@ import { CANADIAN_PROVINCES } from 'utils';
 const RED = 'rgb(230, 79, 64)';
 const GREEN = 'rgb(60, 182, 108)';
 
-const Tooltip = ({ children, data = {} }) => {
+const Tooltip = ({ data = {}, date }) => {
   const classes = useStyles();
   const getColor = (number) => (number < 1 ? GREEN : RED);
   const rtValue = () => data?.yFormatted || data?.y;
 
   return (
     <Paper variant="outlined" elevation={3} className={classes.root}>
-      {children}
       <Typography variant="subtitle1">
         <strong>
           {CANADIAN_PROVINCES[data?.province]}{' '}
@@ -37,6 +36,8 @@ const Tooltip = ({ children, data = {} }) => {
           {data?.low.toFixed(2)}
         </span>
       </Typography>
+      <br />
+      <Typography variant="caption">{date}</Typography>
     </Paper>
   );
 };
