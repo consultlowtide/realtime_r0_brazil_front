@@ -4,7 +4,7 @@ If we are missing anything from this project or can make the development process
 
 ## Code of conduct
 
-We expect all participants to read Shopify's [code of conduct](https://github.com/Shopify/polaris-react/blob/master/.github/CODE_OF_CONDUCT.md). We feel that it is comprehensive and helpful in understanding which actions are and aren’t tolerated.
+We expect all participants to read Shopify's [code of conduct](https://github.com/Shopify/polaris-react/blob/master/.github/CODE_OF_CONDUCT.md). We feel that it is comprehensive and helpful in understanding which actions are and aren’t tolerated in Open Source Software development.
 
 ## Open development
 
@@ -42,7 +42,7 @@ We’ll review your pull request and either merge it, request changes to it, or 
 
 1. Fork the repository and create your branch from `master`
 1. Run `yarn` in the repository root
-1. [Tophat 🎩](https://github.com/Shopify/polaris-react/blob/master/documentation/Tophatting.md) your changes locally with `yarn dev`
+1. `Tophat 🎩` your changes locally by running `yarn dev`, then commenting `🎩` on your PR, ideally with a screenshot of the local change 🙏 
 
 ### Contribution prerequisites
 
