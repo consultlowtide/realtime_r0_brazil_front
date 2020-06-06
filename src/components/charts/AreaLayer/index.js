@@ -9,7 +9,7 @@ const AreaLayerNegative = ({ nodes, xScale, yScale }) => {
     .y1((d) => yScale(d.data.low >= 1 ? d.data.low : 1))
     .curve(curveMonotoneX);
 
-  return <path d={areaGenerator(nodes)} fill={palette.area.negative} />;
+  return <path d={areaGenerator(nodes)} fill={palette.area.positive} />;
 };
 
 const AreaLayerPositive = ({ nodes, xScale, yScale }) => {
@@ -19,7 +19,7 @@ const AreaLayerPositive = ({ nodes, xScale, yScale }) => {
     .y1((d) => yScale(d.data.low))
     .curve(curveMonotoneX);
 
-  return <path d={areaGenerator(nodes)} fill={palette.area.positive} />;
+  return <path d={areaGenerator(nodes)} fill={palette.area.negative} />;
 };
 
 const AreaLayer = ({ nodes, xScale, yScale }) => {
