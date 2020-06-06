@@ -5,8 +5,8 @@ import { Typography, Paper } from '@material-ui/core';
 import useStyles from './Tooltip.styles';
 import { CANADIAN_PROVINCES } from 'utils';
 
-const RED = 'rgb(230, 79, 64)';
-const GREEN = 'rgb(60, 182, 108)';
+const RED = '#E64F40';
+const GREEN = '#3CB66C';
 
 const Tooltip = ({ data = {}, date }) => {
   const classes = useStyles();
