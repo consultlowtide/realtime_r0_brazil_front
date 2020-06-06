@@ -6,14 +6,15 @@
 # Rt Canada
 
 [Check out the live site](https://rt-canada.ca).
-Backend repo: [ivanpeng/rt_covid_ca](https://github.com/ivanpeng/rt_covid_ca).
+
+The back-end repo can be found at [ivanpeng/rt_covid_ca](https://github.com/ivanpeng/rt_covid_ca).
 
 ## Getting started
 - git clone https://github.com/consultlowtide/rt-canada.git
 - yarn
 - yarn start
 
-The [backend of this project](https://github.com/ivanpeng/rt_covid_ca), is not needed in order to run this project. It runs nightly to calculate Rt values based on the [latest case data]() and publish its output to **latest.json** in **src/caseData**.
+The [backend of this project](https://github.com/ivanpeng/rt_covid_ca), is not needed in order to run this project. It runs nightly to calculate Rt values based on the [latest case data](https://github.com/ishaberry/Covid19Canada) from the **COVID-19 Canada Open Data Working Group**, and publishes its output to **src/caseData/latest.json**.
 
 ## Contributors ✨
 
