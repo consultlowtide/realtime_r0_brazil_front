@@ -85,8 +85,28 @@ const theme = createMuiTheme({
 
 export const palette = {
   area: {
-    positive: '#FFEBE7',
-    negative: '#DEFBDD',
+    red: '#FFEBE7',
+    green: '#DEFBDD',
+  },
+  line: {
+    points: {
+      red: '#DE372D',
+      green: '',
+    },
+    customSymbol: {
+      range: {
+        red: '#FFDAD2',
+        green: '#C7F5C0',
+      },
+      border: {
+        red: '#ED6453',
+        green: '#40CC7E',
+      },
+      text: {
+        red: '#E64F40',
+        green: '#3CB66C',
+      },
+    },
   },
 };
 

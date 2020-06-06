@@ -35,7 +35,7 @@ const commonProps = {
     tickRotation: 0,
     format: (d) => d.toFixed(1),
   },
-  colors: '#E17272',
+  colors: '#DE372D',
   layers: [
     AreaLayerPositive,
     AreaLayerNegative,

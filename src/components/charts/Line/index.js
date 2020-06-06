@@ -1,8 +1,8 @@
 import React from 'react';
 import { ResponsiveLine } from '@nivo/line';
-import LineLayer from 'components/charts/LineLayer';
 import TooltipLine from './TooltipLine';
 import { formatBarChartData } from 'utils';
+import { palette } from '../../../theme';
 
 const commonProperties = {
   margin: { top: 20, right: 100, bottom: 60, left: 60 },
@@ -42,7 +42,11 @@ const CustomSymbol = ({
         x={-6}
         height={height}
         y={(-(rest.datum.high - rest.datum.low) * 100) / 2}
-        fill={rest.datum.y.toFixed(2) >= 1 ? '#FFDAD2' : '#C7F5C0'}
+        fill={
+          rest.datum.y.toFixed(2) >= 1
+            ? palette.line.customSymbol.range.red
+            : palette.line.customSymbol.range.green
+        }
       />
       <div>{rest.datum.id}</div>
       <rect
@@ -53,14 +57,22 @@ const CustomSymbol = ({
         x={-12}
         y={-7}
         strokeWidth={1}
-        stroke={rest.datum.y.toFixed(2) >= 1 ? '#ED6453' : '#40CC7E'}
+        stroke={
+          rest.datum.y.toFixed(2) >= 1
+            ? palette.line.customSymbol.border.red
+            : palette.line.customSymbol.border.green
+        }
       />
       <text
         x={-8}
         y={5}
         width="auto"
         style={{ fontSize: '12px' }}
-        fill={rest.datum.y.toFixed(2) >= 1 ? '#ED6453' : '#40CC7E'}
+        fill={
+          rest.datum.y.toFixed(2) >= 1
+            ? palette.line.customSymbol.text.red
+            : palette.line.customSymbol.text.green
+        }
       >
         {rest.datum.province}
       </text>
