@@ -85,8 +85,8 @@ const theme = createMuiTheme({
 
 export const palette = {
   area: {
-    positive: 'rgba(255, 218, 210, 50)',
-    negative: 'rgba(199, 245, 192, 50)',
+    positive: '#FFEBE7',
+    negative: '#DEFBDD',
   },
 };
 

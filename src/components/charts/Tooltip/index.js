@@ -5,6 +5,8 @@ import { Typography, Paper } from '@material-ui/core';
 import useStyles from './Tooltip.styles';
 import { CANADIAN_PROVINCES } from 'utils';
 
+import { palette } from '../../../theme';
+
 const RED = '#E64F40';
 const GREEN = '#3CB66C';
 
