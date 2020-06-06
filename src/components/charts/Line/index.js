@@ -43,7 +43,7 @@ const CustomSymbol = ({
         x={-6}
         height={height}
         y={(-(rest.datum.high - rest.datum.low) * 100) / 2}
-        fill={rest.datum.y > 1 ? '#FFDAD2' : '#C7F5C0'}
+        fill={rest.datum.y.toFixed(2) >= 1 ? '#FFDAD2' : '#C7F5C0'}
       />
       <div>{rest.datum.id}</div>
       <rect
@@ -52,21 +52,19 @@ const CustomSymbol = ({
         height={15}
         rx={7}
         x={-12}
-        y={0}
+        y={-7}
         strokeWidth={1}
-        stroke={rest.datum.y > 1 ? '#ED6453' : '#40CC7E'}
+        stroke={rest.datum.y.toFixed(2) >= 1 ? '#ED6453' : '#40CC7E'}
       />
-      {/* <ellipse cx="4" cy="6" rx="24" ry="12" style={{ position: 'relative' }}> */}
       <text
         x={-8}
-        y={12}
+        y={5}
         width="auto"
         style={{ fontSize: '12px' }}
-        fill={rest.datum.y > 1 ? '#ED6453' : '#40CC7E'}
+        fill={rest.datum.y.toFixed(2) >= 1 ? '#ED6453' : '#40CC7E'}
       >
         {rest.datum.province}
       </text>
-      {/* </ellipse> */}
     </g>
   );
 };
@@ -82,7 +80,7 @@ const Line = ({ data: content }) => {
   const orderedData = data.sort(compare);
 
   orderedData.forEach((item, index) => {
-    if (item.y < 1) {
+    if (item.y < 1.0) {
       mapper.negative[index] = {
         ...item,
         x: index,

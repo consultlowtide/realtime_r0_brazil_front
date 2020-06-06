@@ -10,7 +10,7 @@ const GREEN = 'rgb(60, 182, 108)';
 
 const Tooltip = ({ data = {}, date }) => {
   const classes = useStyles();
-  const getColor = (number) => (number < 1 ? GREEN : RED);
+  const getColor = (number) => (number.toFixed(2) >= 1 ? RED : GREEN);
   const rtValue = () => data?.yFormatted || data?.y;
 
   return (
@@ -24,14 +24,14 @@ const Tooltip = ({ data = {}, date }) => {
         </strong>
       </Typography>
       <Typography variant="caption">
-        High:{' '}
+        Max:{' '}
         <span style={{ color: getColor(data?.high) }}>
           {data?.high.toFixed(2)}
         </span>
       </Typography>
       <br />
       <Typography variant="caption">
-        Low:{' '}
+        Min:{' '}
         <span style={{ color: getColor(data?.low) }}>
           {data?.low.toFixed(2)}
         </span>
