@@ -39,15 +39,7 @@ const RiskList = ({ data: content }) => {
   );
 };
 
-const BoxChart = ({
-  chartActive,
-  id,
-  newCases,
-  newDeaths,
-  rtData,
-  smoothedCases,
-  smoothedDeaths,
-}) => {
+const BoxChart = ({ chartActive, id, rtData }) => {
   const classes = useStyles();
 
   return (
