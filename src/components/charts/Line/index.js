@@ -38,7 +38,7 @@ const CustomSymbol = ({
     <g>
       <rect
         width={12}
-        rx={12}
+        rx={6}
         x={-6}
         height={height}
         y={(-(rest.datum.high - rest.datum.low) * 100) / 2}
