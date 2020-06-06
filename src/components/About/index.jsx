@@ -23,11 +23,7 @@ const About = () => {
             <em>
               R<sub>t</sub>
             </em>{' '}
-            ) represents the effective reproduction rate of COVID-19 calculated
-            for each locale. It lets us estimate how many secondary infections
-            are likely to occur from a single infection in a specific area.
-            Values over 1.0 mean we should expect more cases in that area,
-            values under 1.0 mean we should expect fewer.
+            ) represents the effective reproduction rate of COVID-19 in each location. The effective reproduction rate is the average number of new infections caused by a single infected individual at a specific period in time. It lets us estimate how many additional infections are likely to occur from a single infected person in a specific area. Values of 1.0 or greater mean that we should expect the number of cases to increase in that area, values under 1.0 means that we should expect a decline in the number of cases in that area.
           </Typography>
         </div>
         <div className={classes.section}>
