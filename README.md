@@ -3,17 +3,18 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-# Loft Science
+# Rt Canada
 
-Frontend do projeto [Loft Science](https://loft.science).
-Backend no repositório [https://github.com/loft-br/realtime_r0_brazil](https://github.com/loft-br/realtime_r0_brazil).
+[Check out the live site](https://rt-canada.ca).
+Backend repo: [ivanpeng/rt_covid_ca](https://github.com/ivanpeng/rt_covid_ca).
 
-## Como utilizar
-- git clone https://github.com/loft-br/realtime_r0_brazil_front.git
+## Getting started
+- git clone https://github.com/consultlowtide/rt-canada.git
 - yarn
 - yarn start
 
-Após clonar o [backend desse projeto](https://github.com/loft-br/realtime_r0_brazil), modifique o valor de **baseURL** em **src/utils/api.js** para o seu servidor.
+The [backend of this project](https://github.com/ivanpeng/rt_covid_ca), is not needed in order to run this project. It runs nightly to calculate Rt values based on the [latest case data]() and publish its output to **latest.json** in **src/caseData**.
+
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
