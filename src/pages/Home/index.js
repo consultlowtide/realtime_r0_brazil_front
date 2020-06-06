@@ -32,6 +32,24 @@ const Home = () => {
   const loading = useSelector((state) => state.loading);
   const error = useSelector((state) => state.error);
   const provinces = useSelector((state) => state.data?.provinces);
+
+  const ColorIndicator = ({ backgroundColor }) => (
+    <div className={classes.colorIndicator} style={{ backgroundColor }} />
+  );
+
+  const Legend = () => (
+    <div className={classes.legend}>
+      <div>
+        <ColorIndicator backgroundColor="#FFDAD2" />{' '}
+        <Typography variant="caption" style={{ marginRight: 16 }}>
+          90% CI
+        </Typography>
+        <ColorIndicator backgroundColor="#C7F5C0" />{' '}
+        <Typography variant="caption">90% CI</Typography>
+      </div>
+    </div>
+  );
+
   const lastUpdatedTimestamp = useSelector(
     (state) => state.data?.lastUpdatedTimestamp
   );
@@ -75,6 +93,7 @@ const Home = () => {
         <div className={classes.barChartWrapper}>
           {canRender(provinces) ? <Line data={provinces} /> : <Loader />}
         </div>
+        <Legend />
       </Section>
       <Section>
         <Grid

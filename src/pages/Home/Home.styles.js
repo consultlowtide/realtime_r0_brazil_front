@@ -8,12 +8,25 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 80,
   },
   barChartWrapper: {
-    display: 'flex',
+    // display: 'flex',
     width: '100%',
     position: 'relative',
     height: 500,
     overflowX: 'auto',
     overflowY: 'hidden',
+  },
+  legend: {
+    display: 'flex',
+    flexDirection: 'row',
+    marginLeft: 65,
+    marginTop: -30,
+    marginBottom: 30,
+  },
+  colorIndicator: {
+    display: 'inline-block',
+    width: '23px',
+    height: '8px',
+    marginRight: 8,
   },
 }));
 
