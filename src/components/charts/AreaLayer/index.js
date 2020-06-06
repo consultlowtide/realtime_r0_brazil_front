@@ -1,5 +1,6 @@
 import React from 'react';
 import { area, curveMonotoneX } from 'd3-shape';
+import { palette } from '../../../theme';
 
 const AreaLayerNegative = ({ nodes, xScale, yScale }) => {
   const areaGenerator = area()
@@ -8,7 +9,7 @@ const AreaLayerNegative = ({ nodes, xScale, yScale }) => {
     .y1((d) => yScale(d.data.low >= 1 ? d.data.low : 1))
     .curve(curveMonotoneX);
 
-  return <path d={areaGenerator(nodes)} fill="#FFDAD2" />;
+  return <path d={areaGenerator(nodes)} fill={palette.area.negative} />;
 };
 
 const AreaLayerPositive = ({ nodes, xScale, yScale }) => {
@@ -18,7 +19,7 @@ const AreaLayerPositive = ({ nodes, xScale, yScale }) => {
     .y1((d) => yScale(d.data.low))
     .curve(curveMonotoneX);
 
-  return <path d={areaGenerator(nodes)} fill="#C7F5C0" />;
+  return <path d={areaGenerator(nodes)} fill={palette.area.positive} />;
 };
 
 const AreaLayer = ({ nodes, xScale, yScale }) => {
