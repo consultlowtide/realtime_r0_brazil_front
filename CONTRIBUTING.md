@@ -42,7 +42,7 @@ We’ll review your pull request and either merge it, request changes to it, or 
 
 1. Fork the repository and create your branch from `master`
 1. Run `yarn` in the repository root
-1. `Tophat 🎩` your changes locally by running `yarn dev`, then commenting `🎩` on your PR, ideally with a screenshot of the local change 🙏 
+1. `Tophat 🎩` your changes locally by running `yarn start`, then commenting `🎩` on your PR, ideally with a screenshot of the local change 🙏 
 
 ### Contribution prerequisites
 
@@ -50,8 +50,6 @@ We’ll review your pull request and either merge it, request changes to it, or 
 
 ### Code style
 
-We use an automatic code formatter called [Prettier](https://prettier.io/). Run `yarn format` after making any changes to the code.
-
-Linting will catch common issues that may exist in your code. You can check the status of your code styling by running `yarn lint`.
+We use an automatic code formatter called [Prettier](https://prettier.io/). Please run Prettier after making any changes to the code.
 
 Our code editor of choice is [VS Code](https://code.visualstudio.com/) which has [integrations with Prettier](https://github.com/prettier/prettier-vscode) and our linting tools which make this automatic. If you choose to use VS Code, these integrations will be listed as recommended extensions (or search for `@recommended`) in the extensions panel.
