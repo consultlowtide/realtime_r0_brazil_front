@@ -5,8 +5,7 @@ import TooltipLine from './TooltipLine';
 import { formatBarChartData } from 'utils';
 
 const commonProperties = {
-  // width: 1000,
-  margin: { top: 20, right: 100, bottom: 60, left: 70 },
+  margin: { top: 20, right: 100, bottom: 60, left: 60 },
   animate: true,
   enableSlices: false,
 };
@@ -140,6 +139,11 @@ const Line = ({ data: content }) => {
       axisLeft={{
         format: (d) => d.toFixed(1),
         tickPadding: 20,
+        tickSize: 20,
+      }}
+      axisRight={{
+        format: (v) => '',
+        tickSize: 100,
       }}
       axisBottom={null}
       tooltip={({ point }) => <TooltipLine data={point?.data} />}
@@ -150,7 +154,7 @@ const Line = ({ data: content }) => {
       lineWidth={0}
       layers={[
         'grid',
-        LineLayer,
+        // LineLayer,
         'axes',
         'markers',
         'lines',
@@ -162,8 +166,11 @@ const Line = ({ data: content }) => {
       theme={{
         axis: {
           ticks: {
+            line: {
+              stroke: '#D8D8D8',
+            },
             text: {
-              fill: '#777677',
+              fill: 'rgb(119, 118, 119)',
               fontFamily: 'IBM Plex Sans, sans-serif',
             },
           },
