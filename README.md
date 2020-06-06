@@ -14,7 +14,7 @@ The back-end repo can be found at [ivanpeng/rt_covid_ca](https://github.com/ivan
 - yarn
 - yarn start
 
-The [backend of this project](https://github.com/ivanpeng/rt_covid_ca), is not needed in order to run this project. It runs nightly to calculate Rt values based on the [latest case data](https://github.com/ishaberry/Covid19Canada) from the **COVID-19 Canada Open Data Working Group**, and publishes its output to **src/caseData/latest.json**.
+The [backend of this project](https://github.com/ivanpeng/rt_covid_ca), is not needed in order to run this project. It runs nightly to calculate Rt values based on the [latest case data](https://github.com/ishaberry/Covid19Canada) from the **COVID-19 Canada Open Data Working Group**, and publishes its output to `src/caseData/latest.json`.
 
 ## Contributors ✨
 
