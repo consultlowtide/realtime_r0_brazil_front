@@ -2,6 +2,7 @@ import React from 'react';
 import Link from '@material-ui/core/Link';
 
 import Typography from 'components/Typography';
+import Rt from 'components/Rt';
 import useStyles from './About.styles';
 
 const About = () => {
@@ -12,52 +13,32 @@ const About = () => {
       <div className={classes.section}>
         <div className={classes.section}>
           <Typography className={classes.sectionTitle} variant="h2">
-            What is{' '}
-            <em>
-              R<sub>t</sub>
-            </em>{' '}
-            ?
+            What is <Rt />?
           </Typography>
           <Typography variant="body1">
             The metric being tracked here (
-            <em>
-              R<sub>t</sub>
-            </em>{' '}
-            ) represents the effective reproduction rate of COVID-19 in each
-            location. The effective reproduction rate is the average number of
-            new infections caused by a single infected individual at a specific
-            period in time. It lets us estimate how many additional infections
-            are likely to occur from a single infected person in a specific
-            area. Values of 1.0 or greater mean that we should expect the number
-            of cases to increase in that area, values under 1.0 means that we
-            should expect a decline in the number of cases in that area.
+            <Rt />) represents the effective reproduction rate of COVID-19 in
+            each location. The effective reproduction rate is the average number
+            of new infections caused by a single infected individual at a
+            specific period in time. It lets us estimate how many additional
+            infections are likely to occur from a single infected person in a
+            specific area. Values of 1.0 or greater mean that we should expect
+            the number of cases to increase in that area, values under 1.0 means
+            that we should expect a decline in the number of cases in that area.
           </Typography>
         </div>
         <div className={classes.section}>
           <Typography className={classes.sectionTitle} variant="h2">
-            Calculating{' '}
-            <em>
-              R<sub>t</sub>
-            </em>{' '}
+            Calculating <Rt />
           </Typography>
           <Typography variant="body1">
-            Our
-            <em>
-              R<sub>t</sub>
-            </em>{' '}
-            model for COVID-19 in Canada is an adaptation of loft.science's
-            <em>
-              R<sub>t</sub>
-            </em>{' '}
-            model for Brazil which an adaptation of Kevin Systrom and his team's
-            model for the USA. We used the
-            <em>
-              R<sub>t</sub>
-            </em>{' '}
-            model from Brazil as a foundation because of the similarities
-            between Canadian and Brazilian data sets which was adapted from the
-            original American model. We’ve since improved the confidence and
-            reliability of our model to parity with that of the American model.
+            Our <Rt /> model for COVID-19 in Canada is an adaptation of
+            loft.science's <Rt /> model for Brazil which an adaptation of Kevin
+            Systrom and his team's model for the USA. We used the <Rt /> model
+            from Brazil as a foundation because of the similarities between
+            Canadian and Brazilian data sets which was adapted from the original
+            American model. We’ve since improved the confidence and reliability
+            of our model to parity with that of the American model.
           </Typography>
         </div>
         <div className={classes.section}>
@@ -102,11 +83,7 @@ const About = () => {
               >
                 Jupyter notebook
               </Link>{' '}
-              to see how we're calculating{' '}
-              <em>
-                R<sub>t</sub>
-              </em>{' '}
-              for Canada.
+              to see how we're calculating <Rt /> for Canada.
             </Typography>
           </li>
 
@@ -167,11 +144,7 @@ const About = () => {
               >
                 Jupyter notebook
               </Link>{' '}
-              with their methodology for calculating{' '}
-              <em>
-                R<sub>t</sub>
-              </em>
-              .
+              with their methodology for calculating <Rt />.
             </Typography>
           </li>
           <li>
@@ -227,10 +200,7 @@ const About = () => {
               >
                 GitHub repository
               </Link>{' '}
-              with their{' '}
-              <em>
-                R<sub>t</sub>
-              </em>{' '}
+              with their <Rt />
               calculation methodology for Brazil.{' '}
             </Typography>
           </li>
