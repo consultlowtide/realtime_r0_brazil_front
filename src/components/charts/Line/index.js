@@ -5,7 +5,7 @@ import { formatBarChartData } from 'utils';
 import { palette } from '../../../theme';
 
 const commonProperties = {
-  margin: { top: 20, right: 100, bottom: 60, left: 60 },
+  margin: { top: 20, right: 100, bottom: 60, left: 70 },
   animate: true,
   enableSlices: false,
 };
@@ -151,7 +151,7 @@ const Line = ({ data: content }) => {
       axisLeft={{
         format: (d) => d.toFixed(1),
         tickPadding: 20,
-        tickSize: 20,
+        tickSize: 30,
       }}
       axisRight={{
         format: (v) => '',
