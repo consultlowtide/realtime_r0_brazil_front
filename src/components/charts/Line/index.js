@@ -32,7 +32,7 @@ const CustomSymbol = ({
   borderColor,
   ...rest
 }) => {
-  const height = (rest.datum.high - rest.datum.low) * 100 * 2;
+  const height = (rest.datum.high - rest.datum.low) * 100 * 2.25;
 
   return (
     <g>
@@ -55,7 +55,7 @@ const CustomSymbol = ({
         height={15}
         rx={7}
         x={-12}
-        y={-7}
+        y={-12}
         strokeWidth={1}
         stroke={
           rest.datum.y.toFixed(2) >= 1
@@ -65,7 +65,7 @@ const CustomSymbol = ({
       />
       <text
         x={-8}
-        y={5}
+        y={0}
         width="auto"
         style={{ fontSize: '12px' }}
         fill={
