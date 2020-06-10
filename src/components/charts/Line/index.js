@@ -32,7 +32,7 @@ const CustomSymbol = ({
   borderColor,
   ...rest
 }) => {
-  const height = (rest.datum.high - rest.datum.low) * 100;
+  const height = (rest.datum.high - rest.datum.low) * 200 + 14;
 
   return (
     <g>
@@ -41,7 +41,7 @@ const CustomSymbol = ({
         rx={6}
         x={-6}
         height={height}
-        y={(-(rest.datum.high - rest.datum.low) * 100) / 2}
+        y={-(rest.datum.high - rest.datum.low) * 100 - 5}
         fill={
           rest.datum.y.toFixed(2) >= 1
             ? palette.line.customSymbol.range.red
@@ -55,7 +55,7 @@ const CustomSymbol = ({
         height={15}
         rx={7}
         x={-12}
-        y={-7}
+        y={-12}
         strokeWidth={1}
         stroke={
           rest.datum.y.toFixed(2) >= 1
@@ -65,7 +65,7 @@ const CustomSymbol = ({
       />
       <text
         x={-8}
-        y={5}
+        y={0}
         width="auto"
         style={{ fontSize: '12px' }}
         fill={
