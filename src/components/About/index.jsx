@@ -92,7 +92,7 @@ const About = () => {
               <Link
                 target="_blank"
                 color="primary"
-                href="https://raw.githubusercontent.com/ishaberry/Covid19Canada/master/cases.csv"
+                href="https://github.com/ishaberry/Covid19Canada/"
               >
                 National case count data
               </Link>{' '}
@@ -238,7 +238,7 @@ const About = () => {
           <Link
             target="_blank"
             color="primary"
-            href="https://github.com/martinlaws"
+            href="https://twitter.com/martinblaws"
           >
             Martin Laws
           </Link>
