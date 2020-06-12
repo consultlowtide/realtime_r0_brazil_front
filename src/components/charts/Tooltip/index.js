@@ -7,8 +7,8 @@ import { CANADIAN_PROVINCES } from 'utils';
 
 import { palette } from '../../../theme';
 
-const RED = '#E64F40';
-const GREEN = '#3CB66C';
+const RED = palette.tooltip.red;
+const GREEN = palette.tooltip.green;
 
 const Tooltip = ({ data = {}, date }) => {
   const classes = useStyles();

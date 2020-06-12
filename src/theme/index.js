@@ -108,6 +108,10 @@ export const palette = {
       },
     },
   },
+  tooltip: {
+    red: '#E64F40',
+    green: '#3CB66C',
+  },
 };
 
 export default theme;
