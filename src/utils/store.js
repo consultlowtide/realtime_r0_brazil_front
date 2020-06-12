@@ -22,7 +22,7 @@ export const getLastRtValue = (data = {}, id = '') =>
 
 export const formatListData = (data) => {
   return data?.reduce((current, next) => {
-    const [id, x, y, low, high, newCases, smoothedCases] = next;
+    const [id, x, y, low, high] = next;
     const date = dateObjectBuider(x);
 
     return {

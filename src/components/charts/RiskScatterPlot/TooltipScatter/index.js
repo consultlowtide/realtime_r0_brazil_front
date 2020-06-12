@@ -1,6 +1,4 @@
 import React from 'react';
-
-import { Typography } from '@material-ui/core';
 import { formatDate } from 'utils';
 import Tooltip from 'components/charts/Tooltip';
 

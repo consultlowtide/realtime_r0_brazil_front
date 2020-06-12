@@ -70,7 +70,10 @@ const About = () => {
           Resources
         </Typography>
         <Typography className={classes.sectionTitle} variant="h5">
-          rt-canada.ca 🇨🇦
+          rt-canada.ca{' '}
+          <span role="img" aria-label="Canadian flag emoji">
+            🇨🇦
+          </span>
         </Typography>
         <ul>
           <li>
@@ -122,7 +125,10 @@ const About = () => {
           </li>
         </ul>
         <Typography className={classes.sectionTitle} variant="h5">
-          rt.live 🇺🇸
+          rt.live{' '}
+          <span role="img" aria-label="American flag emoji">
+            🇺🇸
+          </span>
         </Typography>
         <ul>
           <li>
@@ -174,7 +180,10 @@ const About = () => {
         </ul>
 
         <Typography className={classes.sectionTitle} variant="h5">
-          loft.science 🇧🇷
+          loft.science{' '}
+          <span role="img" aria-label="Brazillian flag emoji">
+            🇧🇷
+          </span>
         </Typography>
         <ul>
           <li>
