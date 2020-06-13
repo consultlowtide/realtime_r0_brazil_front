@@ -42,10 +42,12 @@ const Home = () => {
       <div>
         <ColorIndicator backgroundColor="#FFDAD2" />{' '}
         <Typography variant="caption" style={{ marginRight: 16 }}>
-          90% Confidence Interval
+          R<sub>t</sub> &gt; 1
         </Typography>
         <ColorIndicator backgroundColor="#C7F5C0" />{' '}
-        <Typography variant="caption">90% Confidence Interval</Typography>
+        <Typography variant="caption">
+	  R<sub>t</sub> &lt; 1
+	</Typography>
       </div>
     </div>
   );
