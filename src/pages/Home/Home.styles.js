@@ -8,7 +8,6 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 80,
   },
   barChartWrapper: {
-    // display: 'flex',
     width: '100%',
     position: 'relative',
     height: 500,
