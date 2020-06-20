@@ -66,7 +66,11 @@ const About = () => {
             websites, and news media.
           </Typography>
         </div>
-        <Typography className={classes.sectionTitle} variant="h2">
+        <Typography
+          className={classes.sectionTitle}
+          variant="h2"
+          id="resources"
+        >
           Resources
         </Typography>
         <Typography className={classes.sectionTitle} variant="h5">
