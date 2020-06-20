@@ -9,7 +9,7 @@ import Section from 'components/Section';
 
 import { getModelResults } from 'store/actions';
 
-import useStyles from './Home.styles';
+import useStyles from './Ontario.styles';
 
 const Badge = ({ children }) => (
   <div
@@ -32,7 +32,7 @@ const Home = () => {
 
   const loading = useSelector((state) => state.loading);
   const error = useSelector((state) => state.error);
-  const provinces = useSelector((state) => state.data?.canada?.provinces);
+  const regions = useSelector((state) => state.data?.ontario?.regions);
 
   const ColorIndicator = ({ backgroundColor }) => (
     <div className={classes.colorIndicator} style={{ backgroundColor }} />
@@ -98,7 +98,7 @@ const Home = () => {
           </Typography>
         </Badge>
         <div className={classes.barChartWrapper}>
-          {canRender(provinces) ? <Line data={provinces} /> : <Loader />}
+          {canRender(regions) ? <Line data={regions} /> : <Loader />}
         </div>
         <Legend />
       </Section>
@@ -110,7 +110,7 @@ const Home = () => {
           justify="center"
           spacing={4}
         >
-          {canRender(provinces) ? <RiskList data={provinces} /> : <Loader />}
+          {canRender(regions) ? <RiskList data={regions} /> : <Loader />}
         </Grid>
       </Section>
     </>

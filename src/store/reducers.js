@@ -28,7 +28,12 @@ export default (state = initialState, { payload, type }) => {
         ...state,
         data: {
           ...state.data,
-          provinces: payload?.data,
+          canada: {
+            provinces: payload?.data.canada,
+          },
+          ontario: {
+            regions: payload?.data.ontario,
+          },
           lastUpdatedTimestamp: moment
             .unix(payload?.lastUpdatedTimestamp)
             .format('MMMM D [at] h:mm a'),
