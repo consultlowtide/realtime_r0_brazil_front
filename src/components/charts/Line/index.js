@@ -51,10 +51,10 @@ const CustomSymbol = ({
       <div>{rest.datum.id}</div>
       <rect
         fill="#fff"
-        width={25}
-        height={15}
+        width={26}
+        height={14}
         rx={7}
-        x={-12}
+        x={-13}
         y={-12}
         strokeWidth={1}
         stroke={
@@ -64,8 +64,9 @@ const CustomSymbol = ({
         }
       />
       <text
-        x={-8}
-        y={0}
+        x={-11}
+        y={-1}
+        letter-spacing="-0.75"
         width="auto"
         style={{ fontSize: '12px' }}
         fill={
