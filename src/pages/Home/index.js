@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { RiskList, Line } from 'components/charts/';
 import Loader from 'components/Loader';
 import Section from 'components/Section';
-import Rt from 'components/Rt';
+import Legend from 'components/charts/Legend';
 
 import { getModelResults } from 'store/actions';
 
@@ -34,25 +34,6 @@ const Home = () => {
   const loading = useSelector((state) => state.loading);
   const error = useSelector((state) => state.error);
   const provinces = useSelector((state) => state.data?.canada?.provinces);
-
-  const ColorIndicator = ({ backgroundColor }) => (
-    <div className={classes.colorIndicator} style={{ backgroundColor }} />
-  );
-
-  const Legend = () => (
-    <div className={classes.legend}>
-      <div>
-        <ColorIndicator backgroundColor="#FFDAD2" />{' '}
-        <Typography variant="caption" style={{ marginRight: 16 }}>
-          90% Confidence Interval, <Rt /> &gt;= 1
-        </Typography>
-        <ColorIndicator backgroundColor="#C7F5C0" />{' '}
-        <Typography variant="caption">
-          90% Confidence Interval, <Rt /> &lt; 1
-        </Typography>
-      </div>
-    </div>
-  );
 
   const lastUpdatedTimestamp = useSelector(
     (state) => state.data?.lastUpdatedTimestamp
