@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { RiskList, Line } from 'components/charts/';
 import Loader from 'components/Loader';
 import Section from 'components/Section';
+import Rt from 'components/Rt';
 
 import { getModelResults } from 'store/actions';
 
@@ -43,10 +44,12 @@ const Home = () => {
       <div>
         <ColorIndicator backgroundColor="#FFDAD2" />{' '}
         <Typography variant="caption" style={{ marginRight: 16 }}>
-          90% Confidence Interval
+          90% Confidence Interval, <Rt /> &gt;= 1
         </Typography>
         <ColorIndicator backgroundColor="#C7F5C0" />{' '}
-        <Typography variant="caption">90% Confidence Interval</Typography>
+        <Typography variant="caption">
+          90% Confidence Interval, <Rt /> &lt; 1
+        </Typography>
       </div>
     </div>
   );
