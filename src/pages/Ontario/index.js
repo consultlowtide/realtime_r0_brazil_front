@@ -1,13 +1,13 @@
-import React, { useEffect, useCallback } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React, { useCallback } from 'react';
+import { useSelector } from 'react-redux';
 import { Typography, Grid } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
+import Header from 'components/Header';
 import { RiskList, Line } from 'components/charts/';
 import Loader from 'components/Loader';
 import Section from 'components/Section';
-
-import { getModelResults } from 'store/actions';
+import Legend from 'components/charts/Legend';
 
 import useStyles from './Ontario.styles';
 
@@ -26,30 +26,13 @@ const Badge = ({ children }) => (
   </div>
 );
 
-const Home = () => {
+const Ontario = () => {
   const classes = useStyles();
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   const loading = useSelector((state) => state.loading);
   const error = useSelector((state) => state.error);
   const regions = useSelector((state) => state.data?.ontario?.regions);
-
-  const ColorIndicator = ({ backgroundColor }) => (
-    <div className={classes.colorIndicator} style={{ backgroundColor }} />
-  );
-
-  const Legend = () => (
-    <div className={classes.legend}>
-      <div>
-        <ColorIndicator backgroundColor="#FFDAD2" />{' '}
-        <Typography variant="caption" style={{ marginRight: 16 }}>
-          90% Confidence Interval
-        </Typography>
-        <ColorIndicator backgroundColor="#C7F5C0" />{' '}
-        <Typography variant="caption">90% Confidence Interval</Typography>
-      </div>
-    </div>
-  );
 
   const lastUpdatedTimestamp = useSelector(
     (state) => state.data?.lastUpdatedTimestamp
@@ -60,19 +43,10 @@ const Home = () => {
     [error, loading]
   );
 
-  const getData = useCallback(async () => {
-    try {
-      await dispatch(getModelResults());
-    } catch (e) {
-      console.error(e);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  useEffect(() => {
-    getData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  // useEffect(() => {
+  //   getData();
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, []);
 
   if (error) {
     return (
@@ -85,6 +59,7 @@ const Home = () => {
 
   return (
     <>
+      <Header />
       <Section>
         <nav>
           <Link to="/canada">Canada</Link> <Link to="/ontario">Ontario</Link>{' '}
@@ -117,4 +92,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Ontario;
