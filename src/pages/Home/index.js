@@ -1,8 +1,8 @@
 import React, { useEffect, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Typography, Grid } from '@material-ui/core';
-import { Link } from 'react-router-dom';
 
+import Header from 'components/Header';
 import { RiskList, Line } from 'components/charts/';
 import Loader from 'components/Loader';
 import Section from 'components/Section';
@@ -69,12 +69,7 @@ const Home = () => {
 
   return (
     <>
-      <Section>
-        <nav>
-          <Link to="/canada">Canada</Link> <Link to="/ontario">Ontario</Link>{' '}
-          <a href="#resources">Resources</a>
-        </nav>
-      </Section>
+      <Header />
       <Section>
         <Badge>
           <Typography variant="body2">
