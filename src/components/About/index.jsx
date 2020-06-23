@@ -12,6 +12,11 @@ const About = () => {
     <section className={classes.container}>
       <div className={classes.section}>
         <div className={classes.section}>
+          <Typography className={classes.sectionTitle} variant="h1">
+            Resources
+          </Typography>
+        </div>
+        <div className={classes.section}>
           <Typography className={classes.sectionTitle} variant="h2">
             What is <Rt />?
           </Typography>
@@ -67,9 +72,6 @@ const About = () => {
           </Typography>
         </div>
         <Typography className={classes.sectionTitle} variant="h2">
-          Resources
-        </Typography>
-        <Typography className={classes.sectionTitle} variant="h5">
           rt-canada.ca{' '}
           <span role="img" aria-label="Canadian flag emoji">
             🇨🇦
@@ -124,7 +126,7 @@ const About = () => {
             </Typography>
           </li>
         </ul>
-        <Typography className={classes.sectionTitle} variant="h5">
+        <Typography className={classes.sectionTitle} variant="h2">
           rt.live{' '}
           <span role="img" aria-label="American flag emoji">
             🇺🇸
@@ -179,7 +181,7 @@ const About = () => {
           </li>
         </ul>
 
-        <Typography className={classes.sectionTitle} variant="h5">
+        <Typography className={classes.sectionTitle} variant="h2">
           loft.science{' '}
           <span role="img" aria-label="Brazillian flag emoji">
             🇧🇷

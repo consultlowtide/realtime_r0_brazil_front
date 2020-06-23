@@ -27,6 +27,9 @@ const useStyles = makeStyles((theme) => ({
     height: '8px',
     marginRight: 8,
   },
+  resourceHeading: {
+    margin: '32px 0',
+  },
 }));
 
 export default useStyles;
