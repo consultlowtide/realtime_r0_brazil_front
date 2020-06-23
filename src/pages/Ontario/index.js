@@ -1,13 +1,13 @@
 import React, { useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import { Typography, Grid } from '@material-ui/core';
-import { Link } from 'react-router-dom';
 
 import Header from 'components/Header';
 import { RiskList, Line } from 'components/charts/';
 import Loader from 'components/Loader';
 import Section from 'components/Section';
 import Legend from 'components/charts/Legend';
+import AboutRt from 'components/AboutRt';
 
 import useStyles from './Ontario.styles';
 
@@ -60,12 +60,7 @@ const Ontario = () => {
   return (
     <>
       <Header />
-      <Section>
-        <nav>
-          <Link to="/canada">Canada</Link> <Link to="/ontario">Ontario</Link>{' '}
-          <a href="#resources">Resources</a>
-        </nav>
-      </Section>
+      <AboutRt locale="Ontario" />
       <Section>
         <Badge>
           <Typography variant="body2">

@@ -7,6 +7,7 @@ import { RiskList, Line } from 'components/charts/';
 import Loader from 'components/Loader';
 import Section from 'components/Section';
 import Legend from 'components/charts/Legend';
+import AboutRt from 'components/AboutRt';
 
 import { getModelResults } from 'store/actions';
 
@@ -70,6 +71,7 @@ const Home = () => {
   return (
     <>
       <Header />
+      <AboutRt locale="Canada 🇨🇦" />
       <Section>
         <Badge>
           <Typography variant="body2">
