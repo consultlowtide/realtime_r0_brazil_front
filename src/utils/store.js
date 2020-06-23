@@ -34,7 +34,7 @@ export const ONTARIO_REGIONS = {
   LON: 'Middlesex-London',
   NIA: 'Niagara Region',
   NBP: 'North Bay Parry Sound District',
-  NWT: 'Northwestern',
+  NWE: 'Northwestern',
   OTT: 'Ottawa',
   PEL: 'Peel',
   PET: 'Peterborough',
