@@ -8,25 +8,11 @@ import Loader from 'components/Loader';
 import Section from 'components/Section';
 import Legend from 'components/charts/Legend';
 import AboutRt from 'components/AboutRt';
+import MobileChartPlaceholder from 'components/charts/MobileChartPlaceholder';
 
 import { getModelResults } from 'store/actions';
 
 import useStyles from './Home.styles';
-
-const Badge = ({ children }) => (
-  <div
-    style={{
-      background: 'rgba(0, 119, 191, 0.12)',
-      borderRadius: 5,
-      margin: '16px 0',
-      padding: '12px 6px',
-      width: 'max-content',
-      color: 'rgb(0, 119, 191)',
-    }}
-  >
-    {children}
-  </div>
-);
 
 const Home = () => {
   const classes = useStyles();
@@ -59,6 +45,14 @@ const Home = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const Badge = () => (
+    <div className={classes.badge}>
+      <Typography variant="body2">
+        Data last updated: {lastUpdatedTimestamp}
+      </Typography>
+    </div>
+  );
+
   if (error) {
     return (
       <div className={classes.errorWrapper}>
@@ -73,15 +67,12 @@ const Home = () => {
       <Header />
       <AboutRt locale="Canada 🇨🇦" />
       <Section>
-        <Badge>
-          <Typography variant="body2">
-            Data last updated: {lastUpdatedTimestamp}
-          </Typography>
-        </Badge>
+        <Badge />
         <div className={classes.barChartWrapper}>
           {canRender(provinces) ? <Line data={provinces} /> : <Loader />}
+          <Legend />
         </div>
-        <Legend />
+        <MobileChartPlaceholder />
       </Section>
       <Section>
         <Grid
