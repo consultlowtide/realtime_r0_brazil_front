@@ -16,6 +16,10 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-between',
     fontFamily: 'InkInknut Antiqua, serif',
     width: '340px',
+    [theme.breakpoints.down('xs')]: {
+      flexFlow: 'column nowrap',
+      alignItems: 'flex-end',
+    },
   },
 }));
 
