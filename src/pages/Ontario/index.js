@@ -21,7 +21,7 @@ const Ontario = () => {
   const regions = useSelector((state) => state.data?.ontario?.regions);
 
   const lastUpdatedTimestamp = useSelector(
-    (state) => state.data?.lastUpdatedTimestamp
+    (state) => state.data?.ontario.lastUpdatedTimestamp
   );
 
   const canRender = useCallback(
