@@ -12,17 +12,20 @@ export const getModelResults = () => async (dispatch) => {
 
   try {
     const data = {
-      canada: await formatData(caseData.data),
-      ontario: await formatData(ontarioData.data),
+      canada: {
+        data: await formatData(caseData.data),
+        lastUpdatedTimestamp: caseData.last_updated_timestamp,
+      },
+      ontario: {
+        data: await formatData(ontarioData.data),
+        lastUpdatedTimestamp: ontarioData.last_updated_timestamp,
+      },
     };
-
-    const lastUpdatedTimestamp = caseData.last_updated_timestamp;
 
     dispatch({
       type: actionTypes.LOAD_MODEL_SUCCESS,
       payload: {
         data,
-        lastUpdatedTimestamp,
       },
     });
 
