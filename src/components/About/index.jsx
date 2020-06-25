@@ -48,7 +48,7 @@ const About = () => {
         </div>
         <div className={classes.section}>
           <Typography className={classes.sectionTitle} variant="h2">
-            Why Isn’t My Province/Territory Listed!?
+            Why Isn’t My Province/Territory/Public Health Unit Listed!?
           </Typography>
           <Typography variant="body1">
             We exclude any provinces, territories, or regional public health
