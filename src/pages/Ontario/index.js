@@ -1,5 +1,5 @@
-import React, { useEffect, useCallback } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React, { useCallback } from 'react';
+import { useSelector } from 'react-redux';
 import { Typography, Grid } from '@material-ui/core';
 
 import Header from 'components/Header';
@@ -10,40 +10,24 @@ import Legend from 'components/charts/Legend';
 import AboutRt from 'components/AboutRt';
 import MobileChartPlaceholder from 'components/charts/MobileChartPlaceholder';
 
-import { getModelResults } from 'store/actions';
+import useStyles from './Ontario.styles';
 
-import useStyles from './Home.styles';
-
-const Home = () => {
+const Ontario = () => {
   const classes = useStyles();
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   const loading = useSelector((state) => state.loading);
   const error = useSelector((state) => state.error);
-  const provinces = useSelector((state) => state.data?.canada?.provinces);
+  const regions = useSelector((state) => state.data?.ontario?.regions);
 
   const lastUpdatedTimestamp = useSelector(
-    (state) => state.data?.canada.lastUpdatedTimestamp
+    (state) => state.data?.ontario.lastUpdatedTimestamp
   );
 
   const canRender = useCallback(
     (data) => !error && !loading && data !== undefined && data !== null,
     [error, loading]
   );
-
-  const getData = useCallback(async () => {
-    try {
-      await dispatch(getModelResults());
-    } catch (e) {
-      console.error(e);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  useEffect(() => {
-    getData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   const Badge = () => (
     <div className={classes.badge}>
@@ -65,11 +49,15 @@ const Home = () => {
   return (
     <>
       <Header />
-      <AboutRt locale="Canada" localeText="Canada by Province/Territory" />
+      <AboutRt locale="Ontario" localeText="Ontario by Public Health Unit" />
       <Section>
-        <Badge />
+        <Badge>
+          <Typography variant="body2">
+            Data last updated: {lastUpdatedTimestamp}
+          </Typography>
+        </Badge>
         <div className={classes.barChartWrapper}>
-          {canRender(provinces) ? <Line data={provinces} /> : <Loader />}
+          {canRender(regions) ? <Line data={regions} /> : <Loader />}
           <Legend />
         </div>
         <MobileChartPlaceholder />
@@ -82,11 +70,11 @@ const Home = () => {
           justify="center"
           spacing={4}
         >
-          {canRender(provinces) ? <RiskList data={provinces} /> : <Loader />}
+          {canRender(regions) ? <RiskList data={regions} /> : <Loader />}
         </Grid>
       </Section>
     </>
   );
 };
 
-export default Home;
+export default Ontario;
