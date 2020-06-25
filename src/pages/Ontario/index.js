@@ -1,5 +1,5 @@
-import React, { useCallback } from 'react';
-import { useSelector } from 'react-redux';
+import React, { useCallback, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Typography, Grid } from '@material-ui/core';
 
 import Header from 'components/Header';
@@ -9,12 +9,15 @@ import Section from 'components/Section';
 import Legend from 'components/charts/Legend';
 import AboutRt from 'components/AboutRt';
 import MobileChartPlaceholder from 'components/charts/MobileChartPlaceholder';
+import Footer from 'components/Footer';
+
+import { getModelResults } from 'store/actions';
 
 import useStyles from './Ontario.styles';
 
 const Ontario = () => {
   const classes = useStyles();
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const loading = useSelector((state) => state.loading);
   const error = useSelector((state) => state.error);
@@ -28,6 +31,20 @@ const Ontario = () => {
     (data) => !error && !loading && data !== undefined && data !== null,
     [error, loading]
   );
+
+  const getData = useCallback(async () => {
+    try {
+      await dispatch(getModelResults());
+    } catch (e) {
+      console.error(e);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    getData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const Badge = () => (
     <div className={classes.badge}>
@@ -73,6 +90,7 @@ const Ontario = () => {
           {canRender(regions) ? <RiskList data={regions} /> : <Loader />}
         </Grid>
       </Section>
+      <Footer />
     </>
   );
 };

@@ -9,6 +9,7 @@ import Section from 'components/Section';
 import Legend from 'components/charts/Legend';
 import AboutRt from 'components/AboutRt';
 import MobileChartPlaceholder from 'components/charts/MobileChartPlaceholder';
+import Footer from 'components/Footer';
 
 import { getModelResults } from 'store/actions';
 
@@ -24,6 +25,14 @@ const Home = () => {
 
   const lastUpdatedTimestamp = useSelector(
     (state) => state.data?.canada?.lastUpdatedTimestamp
+  );
+
+  const Badge = () => (
+    <div className={classes.badge}>
+      <Typography variant="body2">
+        Data last updated: {lastUpdatedTimestamp}
+      </Typography>
+    </div>
   );
 
   const canRender = useCallback(
@@ -44,14 +53,6 @@ const Home = () => {
     getData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  const Badge = () => (
-    <div className={classes.badge}>
-      <Typography variant="body2">
-        Data last updated: {lastUpdatedTimestamp}
-      </Typography>
-    </div>
-  );
 
   if (error) {
     return (
@@ -85,6 +86,7 @@ const Home = () => {
           {canRender(provinces) ? <RiskList data={provinces} /> : <Loader />}
         </Grid>
       </Section>
+      <Footer />
     </>
   );
 };
