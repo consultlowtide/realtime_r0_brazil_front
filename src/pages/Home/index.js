@@ -65,7 +65,7 @@ const Home = () => {
   return (
     <>
       <Header />
-      <AboutRt locale="Canada 🇨🇦" />
+      <AboutRt locale="Canada" localeText="Canada by Province/Territory" />
       <Section>
         <Badge />
         <div className={classes.barChartWrapper}>

@@ -49,7 +49,7 @@ const Ontario = () => {
   return (
     <>
       <Header />
-      <AboutRt locale="Ontario" />
+      <AboutRt locale="Ontario" localeText="Ontario by Public Health Unit" />
       <Section>
         <Badge>
           <Typography variant="body2">
