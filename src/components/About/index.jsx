@@ -48,14 +48,16 @@ const About = () => {
         </div>
         <div className={classes.section}>
           <Typography className={classes.sectionTitle} variant="h2">
-            Wait Why Isn’t My Province/Territory Listed?
+            Why Isn’t My Province/Territory Listed!?
           </Typography>
           <Typography variant="body1">
-            Canada is a HUGE country and some areas are sparsely populated
-            compared to other parts of North America. If your province or
-            territory isn’t listed that’s because we don’t have enough data from
-            your particular region to make make a statistical prediction we can
-            feel confident about.
+            We exclude any provinces, territories, or regional public health
+            units (PHU) from our charts that have had fewer than 100 cases. We
+            do this for the populations in those geographic regions because the
+            small number of cases creates a lot of noise in our mathematical
+            predictions and is therefore considered unreliable. That said, if
+            your geographic region isn’t listed it can most likely re-open if
+            you don’t see any cases within 10 days.
           </Typography>
         </div>
         <div className={classes.section}>

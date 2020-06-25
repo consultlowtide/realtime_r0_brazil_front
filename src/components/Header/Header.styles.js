@@ -5,10 +5,15 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexFlow: 'row wrap',
     justifyContent: 'space-between',
+    alignItems: 'center',
   },
   logo: {
-    width: '50px',
-    height: '50px',
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  marginLeft: {
+    marginLeft: '16px',
   },
   headerNav: {
     display: 'flex',
@@ -19,6 +24,12 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('xs')]: {
       flexFlow: 'column nowrap',
       alignItems: 'flex-end',
+    },
+  },
+  underlineOnHover: {
+    textDecoration: 'none',
+    '&:hover': {
+      textDecoration: 'underline',
     },
   },
 }));
