@@ -3,7 +3,7 @@ import React from 'react';
 import { Typography, Paper } from '@material-ui/core';
 
 import useStyles from './Tooltip.styles';
-import { CANADIAN_PROVINCES, ONTARIO_REGIONS } from 'utils';
+import { CANADIAN_PROVINCES } from 'utils';
 
 import { palette } from '../../../theme';
 
@@ -19,8 +19,7 @@ const Tooltip = ({ data = {}, date }) => {
     <Paper variant="outlined" elevation={3} className={classes.root}>
       <Typography variant="subtitle1">
         <strong>
-          {CANADIAN_PROVINCES[data?.province] ||
-            ONTARIO_REGIONS[data?.province]}{' '}
+          {CANADIAN_PROVINCES[data?.province]}{' '}
           <span style={{ color: getColor(rtValue()) }}>
             {rtValue().toFixed(2)}
           </span>
