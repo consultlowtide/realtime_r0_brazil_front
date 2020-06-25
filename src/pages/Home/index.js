@@ -23,7 +23,7 @@ const Home = () => {
   const provinces = useSelector((state) => state.data?.canada?.provinces);
 
   const lastUpdatedTimestamp = useSelector(
-    (state) => state.data?.canada.lastUpdatedTimestamp
+    (state) => state.data?.canada?.lastUpdatedTimestamp
   );
 
   const canRender = useCallback(
