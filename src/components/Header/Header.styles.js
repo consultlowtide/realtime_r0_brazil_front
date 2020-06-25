@@ -23,7 +23,8 @@ const useStyles = makeStyles((theme) => ({
     width: '340px',
     [theme.breakpoints.down('xs')]: {
       flexFlow: 'column nowrap',
-      alignItems: 'flex-end',
+      alignItems: 'flex-start',
+      marginTop: '16px',
     },
   },
   underlineOnHover: {
