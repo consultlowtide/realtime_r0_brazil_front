@@ -1,12 +1,7 @@
 import React, { memo } from 'react';
 import { Grid, Typography } from '@material-ui/core';
 
-import {
-  getLastRtValue,
-  formatListData,
-  CANADIAN_PROVINCES,
-  ONTARIO_REGIONS,
-} from 'utils';
+import { getLastRtValue, formatListData, CANADIAN_PROVINCES } from 'utils';
 
 import { RiskScatterPlot } from 'components/charts';
 
@@ -50,9 +45,7 @@ const BoxChart = ({ chartActive, id, rtData }) => {
   return (
     <div className={classes.root}>
       <header className={classes.header}>
-        <Typography variant="h4">
-          {CANADIAN_PROVINCES[id] || ONTARIO_REGIONS[id]}
-        </Typography>
+        <Typography variant="h4">{CANADIAN_PROVINCES[id]}</Typography>
         <Typography
           variant="h3"
           color={getLastRtValue(rtData, id) < 1 ? 'secondary' : 'error'}

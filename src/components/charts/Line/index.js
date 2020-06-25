@@ -34,9 +34,6 @@ const CustomSymbol = ({
 }) => {
   const height = (rest.datum.high - rest.datum.low) * 200 + 14;
 
-  const formatSymbol = (largeSize, smallSize) =>
-    rest.datum.province.length === 3 ? largeSize : smallSize;
-
   return (
     <g>
       <rect
@@ -54,10 +51,10 @@ const CustomSymbol = ({
       <div>{rest.datum.id}</div>
       <rect
         fill="#fff"
-        width={formatSymbol(26, 24)}
-        height={14}
+        width={25}
+        height={15}
         rx={7}
-        x={formatSymbol(-13, -11)}
+        x={-12}
         y={-12}
         strokeWidth={1}
         stroke={
@@ -67,9 +64,8 @@ const CustomSymbol = ({
         }
       />
       <text
-        x={formatSymbol(-11, -7)}
-        y={-1}
-        letterSpacing="-0.75"
+        x={-8}
+        y={0}
         width="auto"
         style={{ fontSize: '12px' }}
         fill={

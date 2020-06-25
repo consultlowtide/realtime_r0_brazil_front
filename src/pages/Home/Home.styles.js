@@ -7,26 +7,13 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     marginTop: 80,
   },
-  badge: {
-    background: 'rgba(0, 119, 191, 0.12)',
-    borderRadius: 5,
-    margin: '16px 0',
-    padding: '12px 6px',
-    width: 'max-content',
-    color: 'rgb(0, 119, 191)',
-    [theme.breakpoints.down('xs')]: {
-      visibility: 'hidden',
-    },
-  },
   barChartWrapper: {
+    // display: 'flex',
     width: '100%',
     position: 'relative',
     height: 500,
     overflowX: 'auto',
     overflowY: 'hidden',
-    [theme.breakpoints.down('xs')]: {
-      visibility: 'hidden',
-    },
   },
   legend: {
     display: 'flex',
