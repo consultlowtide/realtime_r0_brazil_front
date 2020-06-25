@@ -68,6 +68,14 @@
       rel="stylesheet"
     />
 
+    <script>
+      navigator.serviceWorker.getRegistrations().then(function(registrations) {
+        for(let registration of registrations) {
+          registration.unregister()
+          document.location.reload()
+      } })
+    </script>
+
     <title>Rt Canada 🇨🇦</title>
   </head>
 
