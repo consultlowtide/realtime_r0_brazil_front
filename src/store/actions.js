@@ -1,7 +1,7 @@
 import actionTypes from './action_types';
 import { formatData } from '../utils/format-data';
 // @ts-ignore
-import caseData from '../caseData/latest.json';
+import caseData from '../caseData/latest-canada.json';
 // @ts-ignore
 import ontarioData from '../caseData/latest-ontario.json';
 
