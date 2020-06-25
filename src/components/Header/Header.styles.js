@@ -27,10 +27,13 @@ const useStyles = makeStyles((theme) => ({
       marginTop: '16px',
     },
   },
-  underlineOnHover: {
+  navLink: {
     textDecoration: 'none',
     '&:hover': {
       textDecoration: 'underline',
+    },
+    [theme.breakpoints.down('xs')]: {
+      padding: '8px 0',
     },
   },
 }));

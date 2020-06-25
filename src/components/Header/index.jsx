@@ -44,13 +44,13 @@ function Header() {
           </Typography>
         </div>
         <nav className={classes.headerNav}>
-          <Link to="/" className={classes.underlineOnHover}>
+          <Link to="/" className={classes.navLink}>
             <Typography variant="h4">Canada</Typography>
           </Link>{' '}
-          <Link to="/ontario" className={classes.underlineOnHover}>
+          <Link to="/ontario" className={classes.navLink}>
             <Typography variant="h4">Ontario</Typography>
           </Link>{' '}
-          <Link to="/resources" className={classes.underlineOnHover}>
+          <Link to="/resources" className={classes.navLink}>
             {' '}
             <Typography variant="h4">Resources</Typography>
           </Link>{' '}
