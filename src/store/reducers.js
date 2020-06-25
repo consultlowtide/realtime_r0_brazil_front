@@ -29,16 +29,20 @@ export default (state = initialState, { payload, type }) => {
         data: {
           ...state.data,
           canada: {
-            provinces: payload?.data.canada.data,
-            lastUpdatedTimestamp: moment
-              .unix(payload?.data.canada.lastUpdatedTimestamp)
-              .format('MMMM D [at] h:mm a'),
+            provinces: payload?.data?.canada?.data,
+            lastUpdatedTimestamp:
+              moment
+                .unix(payload?.data.canada.lastUpdatedTimestamp)
+                .format('MMMM D [at] h:mm a') ||
+              'Uh oh, there has been an error!',
           },
           ontario: {
-            regions: payload?.data.ontario.data,
-            lastUpdatedTimestamp: moment
-              .unix(payload?.data.ontario.lastUpdatedTimestamp)
-              .format('MMMM D [at] h:mm a'),
+            regions: payload?.data?.ontario?.data,
+            lastUpdatedTimestamp:
+              moment
+                .unix(payload?.data.ontario.lastUpdatedTimestamp)
+                .format('MMMM D [at] h:mm a') ||
+              'Uh oh, there has been an error!',
           },
         },
         loading: false,
