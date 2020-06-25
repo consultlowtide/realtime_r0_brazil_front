@@ -1,6 +1,9 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9a453cd6-8c14-4ddf-8481-98f002ab8932/deploy-status)](https://app.netlify.com/sites/rt-canada/deploys)
+
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 # Rt Canada
@@ -10,11 +13,12 @@
 The back-end repo can be found at [ivanpeng/rt_covid_ca](https://github.com/ivanpeng/rt_covid_ca).
 
 ## Getting started
+
 - git clone https://github.com/consultlowtide/rt-canada.git
 - yarn
 - yarn start
 
-The [backend of this project](https://github.com/ivanpeng/rt_covid_ca), is not needed in order to run this project. It runs nightly to calculate Rt values based on the [latest case data](https://github.com/ishaberry/Covid19Canada) from the **COVID-19 Canada Open Data Working Group**, and publishes its output to `src/caseData/latest.json`.
+The [backend of this project](https://github.com/ivanpeng/rt_covid_ca), is not needed in order to run this project. It runs nightly to calculate Rt values based on the [latest case data](https://github.com/ishaberry/Covid19Canada) from the **COVID-19 Canada Open Data Working Group**, and publishes its output to `src/caseData/` as `latest-canada.json` and `latest-ontario.json`.
 
 ## Contributors ✨
 
@@ -33,6 +37,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

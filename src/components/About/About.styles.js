@@ -4,7 +4,6 @@ const useStyles = makeStyles((theme) => ({
   container: {
     display: 'flex',
     flexDirection: 'column',
-    borderTop: `1px solid ${theme.palette.grey[500]}`,
     padding: theme.spacing(6, 0),
   },
   headline: {
